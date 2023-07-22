@@ -49,3 +49,35 @@ ScrollReveal().reveal('.home-content, .heading', {origin:'top'});
 ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form, .skills-box', {origin:'buttom'});
 ScrollReveal().reveal('.home-content h1, .about-img', {origin:'left'});
 ScrollReveal().reveal('.home-content p, .about-content', {origin:'right'});
+
+
+
+/*==================== Email ====================*/
+function sendMail()
+{
+    var params = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        subject: document.getElementById("Subject").value,
+        message: document.getElementById("Message").value
+    };
+}
+
+const serviceId = "service_oyusurb";
+const templateId = "template_1k8tgrn";
+
+emailjs.send(serviceId,templateId,params).then(
+    res => {
+        document.getElementById("name").value = "";
+        document.getElementById("email").value ="";
+        document.getElementById("phone").value="" ;
+        document.getElementById("Subject").value ="";
+        document.getElementById("Message").value ="";
+        const myToast = new bootstrap.Toast(document.getElementById("toast"));
+        myToast.show();
+      },
+      error => {
+        console.log("Failed to send email:", error);
+      }
+);
