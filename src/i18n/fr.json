@@ -1,0 +1,191 @@
+{
+  "lang": "fr",
+  "html_lang": "fr",
+  "hreflang": "fr",
+  "og_locale": "fr_FR",
+  "path": "/fr/",
+  "name": "Français",
+  "code": "FR",
+  "meta": {
+    "title": "Ahmed Homrani | Développeur Full Stack Java à Tunis",
+    "description": "Ahmed Homrani, développeur full stack Java à Tunis. Spring Boot et Angular : facturation PEPPOL, sécurité multi-tenant, ERP et apps Flutter.",
+    "og_title": "Ahmed Homrani | Développeur Full Stack Java",
+    "og_description": "Développeur Java, Spring Boot et Angular chez Audaxis. Facturation électronique, ERP, plateformes multi-tenant sécurisées et applications mobiles.",
+    "og_alt": "Ahmed Homrani, développeur full stack Java, entouré de planètes qui représentent ses projets"
+  },
+  "schema": {
+    "job_title": "Développeur Full Stack Java",
+    "master": "Mastère professionnel en développement logiciel et nouvelles technologies",
+    "bachelor": "Licence en sciences informatiques"
+  },
+  "ui": {
+    "skip": "Aller au contenu",
+    "home_label": "Ahmed Homrani, retour en haut",
+    "menu": "Menu",
+    "nav_label": "Principal",
+    "nav_work": "Projets",
+    "nav_experience": "Parcours",
+    "nav_about": "À propos",
+    "nav_contact": "Contact",
+    "lang_label": "Langue",
+    "cv": "CV",
+    "cv_pdf": "CV (PDF)",
+    "system_label": "Projets représentés par des planètes",
+    "system_hint": "Chaque planète est un projet. Choisissez-en une, ou faites défiler pour voyager.",
+    "stack": "Technologies",
+    "visit_site": "Voir le site en ligne",
+    "view_code": "Voir le code sur GitHub",
+    "new_tab": "(s'ouvre dans un nouvel onglet)",
+    "footer": "Conçu à la main en HTML, CSS et un peu de JavaScript.",
+    "back_top": "Retour en haut",
+    "dismiss": "Fermer",
+    "suggest": "Ce site est aussi disponible en français.",
+    "suggest_go": "Lire en français"
+  },
+  "hero": {
+    "kicker": "Développeur full stack Java, Tunis",
+    "lede": "Je conçois des logiciels Java et Angular sécurisés pour les entreprises : facturation électronique, ERP et plateformes multi-tenant sur lesquelles d'autres entreprises se connectent.",
+    "cta_work": "Voir mes projets",
+    "cta_cv": "Télécharger le CV",
+    "facts": [
+      { "dt": "Aujourd'hui", "dd": "Développeur Java chez Audaxis" },
+      { "dt": "Formation", "dd": "Mastère en développement logiciel, 2026" },
+      { "dt": "Langues", "dd": "Arabe, français, anglais (C1)" }
+    ]
+  },
+  "projects": {
+    "head": "Projets choisis",
+    "intro": "Huit projets, des plateformes d'entreprise aux applications mobiles. Les projets clients sont sous NDA : certains n'ont donc pas de lien public.",
+    "items": {
+      "smartdigidocs": {
+        "where": "Audaxis",
+        "when": "Depuis août 2024",
+        "title": "SmartDigiDocs",
+        "summary": "Une plateforme documentaire pour la facturation électronique et les paiements : validation des normes, isolation des tenants et interopérabilité avec les systèmes clients.",
+        "points": [
+          "Conception du module de validation des codes QR : plus de 5 000 documents traités, interopérable avec plus de 100 systèmes clients.",
+          "Validation XML aux normes PEPPOL et EN 16931, et module de génération de codes de paiement SEPA.",
+          "Architecture de services multi-tenant basée sur OAuth2, SAML et JWT : contrôle d'accès RBAC/ABAC, pistes d'audit centralisées et principes Zero Trust entre les tenants.",
+          "Intégration d'audits de sécurité SAST et DAST automatisés dans les pipelines Jenkins et Azure DevOps.",
+          "Gestion de l'authentification et des accès Active Directory via JNDI Realm et LDAP."
+        ]
+      },
+      "erp": {
+        "where": "Audaxis",
+        "when": "Sept. 2023 à juil. 2024",
+        "title": "ERP APIZ & Compiere",
+        "summary": "Nouvelles fonctionnalités et évolutions complexes sur deux ERP, de l'analyse fonctionnelle avec les équipes métier jusqu'au déploiement.",
+        "points": [
+          "Développement en Java/JEE et Spring Boot côté backend, Angular et TypeScript côté frontend.",
+          "Optimisation des requêtes SQL sous PostgreSQL et Oracle, avec une forte baisse des temps de réponse des modules critiques.",
+          "Création des API qui relient l'ERP aux autres applications métier.",
+          "Mise en place de pipelines CI/CD automatisés sous GitLab, sur Docker et Kubernetes."
+        ]
+      },
+      "health": {
+        "where": "ISI, Université de Tunis El Manar",
+        "when": "Févr. à juin 2026, stage",
+        "title": "Plateforme de santé numérique",
+        "summary": "Les patients trouvent un médecin, réservent un rendez-vous en temps réel et gardent leur dossier médical au même endroit, en toute sécurité.",
+        "points": [
+          "Conception de l'API REST en Spring Boot avec authentification JWT, contrôle d'accès par rôles et HTTPS.",
+          "Application Flutter pour iOS et Android : rendez-vous et dossiers médicaux accessibles depuis le téléphone.",
+          "Couche de persistance Spring Data JPA optimisée pour des données médicales complexes sous charge concurrente.",
+          "Notifications en temps réel pour les rappels de rendez-vous et les confirmations de réservation."
+        ]
+      },
+      "lei": {
+        "where": "Site client",
+        "when": "Salon de manucure à Tunis",
+        "title": "The Lei Studio",
+        "summary": "Un site vitrine d'une page pour un salon de manucure à Tunis : prestations, tarifs, horaires, plan d'accès et boutons WhatsApp et téléphone en un geste.",
+        "points": [
+          "Tous les textes et tarifs sont dans un seul fichier de données : les mises à jour ne touchent jamais aux composants.",
+          "Chaque push sur main construit et déploie le site sur GitHub Pages via GitHub Actions."
+        ]
+      },
+      "smuppy": {
+        "where": "Sport Up",
+        "when": "Application mobile",
+        "title": "Smuppy",
+        "summary": "Un réseau social du sport : fil d'actualité et stories, courtes vidéos, événements sportifs locaux à rejoindre et une carte qui guide vers les salles de sport proches.",
+        "points": [],
+        "alt": "Cinq écrans de l'application Smuppy : page d'événement, fil avec stories, écran de démarrage, itinéraire vers une salle de sport et vidéo courte"
+      },
+      "reservi": {
+        "where": "Application web",
+        "when": "Tunisie",
+        "title": "Reservi.tn",
+        "summary": "Une plateforme pour découvrir et réserver des restaurants, cafés et bars en Tunisie.",
+        "points": [],
+        "alt": "Page d'accueil de Reservi.tn : découvrir des restaurants, cafés et bars en Tunisie"
+      },
+      "hr": {
+        "where": "Digital Power Consulting",
+        "when": "Févr. à juin 2023, stage",
+        "title": "Gestion RH",
+        "summary": "Espace DPC, un portail RH qui relie les employés, les candidats et l'entreprise.",
+        "points": [
+          "Authentification sécurisée et contrôle d'accès par rôles.",
+          "Composants Angular réutilisables pour des écrans cohérents."
+        ],
+        "alt": "Page d'accueil d'Espace DPC, le portail RH de Digital Power Consulting"
+      },
+      "resaposte": {
+        "where": "La Poste Tunisienne",
+        "when": "Juin à août 2022, stage",
+        "title": "ResaPoste",
+        "summary": "La prise de rendez-vous pour les clients VIP de La Poste Tunisienne : un créneau réservé plutôt qu'une file d'attente.",
+        "points": [
+          "Modules de planification et de calendrier, authentification et endpoints d'API protégés."
+        ],
+        "alt": "Page d'accueil de ResaPoste, sous la marque myPoste, pour les clients de La Poste Tunisienne"
+      }
+    }
+  },
+  "experience": {
+    "head": "Parcours",
+    "items": [
+      { "when": "Depuis août 2024", "title": "Développeur Java", "org": "Audaxis, Lac 1, Tunis", "text": "SmartDigiDocs : validation PEPPOL et EN 16931, codes de paiement SEPA, validation QR pour plus de 100 systèmes clients, sécurité multi-tenant OAuth2/SAML/JWT, pipelines DevSecOps." },
+      { "when": "Sept. 2023 à juil. 2024", "title": "Développeur Full Stack Java, Analyste ERP", "org": "Audaxis, Lac 1, Tunis", "text": "ERP APIZ et Compiere : fonctionnalités en Java/JEE, Spring Boot et Angular, optimisation SQL sous PostgreSQL et Oracle, API, CI/CD GitLab sur Docker et Kubernetes." },
+      { "when": "Févr. 2026 à juin 2026", "title": "Stagiaire Développeur Full Stack", "org": "ISI, Ariana", "text": "Plateforme de santé numérique en Spring Boot, Angular et Flutter : réservation en temps réel, dossiers médicaux sécurisés, notifications." },
+      { "when": "Févr. 2023 à juin 2023", "title": "Stagiaire Développeur Full Stack", "org": "Digital Power Consulting, Manzah 6", "text": "Application de gestion RH en Angular et Spring Boot, contrôle d'accès par rôles, composants UI réutilisables, équipe Agile." },
+      { "when": "Juin 2022 à août 2022", "title": "Stagiaire Développeur Full Stack", "org": "La Poste Tunisienne", "text": "Plateforme de prise de rendez-vous pour les clients VIP en Angular et Spring Boot." }
+    ]
+  },
+  "education": {
+    "head": "Formation",
+    "items": [
+      { "when": "2024 à 2026", "title": "Mastère professionnel en développement logiciel et nouvelles technologies", "org": "ISI, Université de Tunis El Manar" },
+      { "when": "2020 à 2023", "title": "Licence en sciences informatiques", "org": "ISTIC, Université de Carthage" }
+    ]
+  },
+  "skills": {
+    "head": "Compétences",
+    "groups": [
+      { "dt": "Backend", "dd": "Java, JEE, Spring Boot, Spring Security, Spring Data, Hibernate, OSGi, Eclipse EMF" },
+      { "dt": "Frontend et mobile", "dd": "Angular, TypeScript, React, HTML5, CSS, Bootstrap, Flutter" },
+      { "dt": "Données et messagerie", "dd": "PostgreSQL, Oracle, MongoDB, MySQL, Kafka, RabbitMQ, Apache ActiveMQ" },
+      { "dt": "DevOps et cloud", "dd": "Docker, Kubernetes, GitLab CI/CD, Jenkins, Azure DevOps, Microsoft Azure, Maven" },
+      { "dt": "Sécurité", "dd": "OAuth2, SAML, JWT, RBAC/ABAC, LDAP et Active Directory, SAST et DAST" },
+      { "dt": "Développement assisté par IA", "dd": "GitHub Copilot, Claude Code, Cursor, ingénierie de prompt" }
+    ]
+  },
+  "about": {
+    "head": "À propos",
+    "portrait_alt": "Portrait d'Ahmed Homrani",
+    "p": [
+      "Je suis développeur full stack, basé en Tunisie, avec trois ans d'expérience professionnelle en Java et Angular. Je tiens à la Clean Architecture et aux parties discrètes du logiciel : la règle de validation qui bloque une facture erronée, le contrôle d'accès qui empêche un tenant de voir les données d'un autre, la requête SQL qui fait charger un rapport en quelques secondes.",
+      "J'ai terminé un mastère en développement logiciel en parallèle de mon poste, et j'utilise des outils de développement assisté par IA au quotidien. Un trait de caractère : je ne peux pas dormir avec un bug dans mon projet."
+    ],
+    "facts": [
+      { "dt": "Basé à", "dd": "Tunis, Tunisie" },
+      { "dt": "Langues", "dd": "Arabe (langue maternelle), anglais (IELTS Academic C1), français (courant)" },
+      { "dt": "Bénévolat", "dd": "Chef d'équipe du projet jeunesse Ma3an avec l'Organisation Nationale Tunisienne des Jeunes ; bénévole du Croissant-Rouge tunisien pendant la réponse au COVID-19" }
+    ]
+  },
+  "contact": {
+    "head": "Me contacter",
+    "text": "Un projet ou un poste en tête ? L'e-mail est le moyen le plus rapide de me joindre."
+  }
+}

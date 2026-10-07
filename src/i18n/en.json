@@ -1,0 +1,260 @@
+{
+  "lang": "en",
+  "html_lang": "en",
+  "hreflang": "en",
+  "og_locale": "en_US",
+  "path": "/",
+  "name": "English",
+  "code": "EN",
+  "meta": {
+    "title": "Ahmed Homrani | Full Stack Java Developer in Tunis",
+    "description": "Ahmed Homrani, full stack Java developer in Tunis. Spring Boot and Angular: PEPPOL e-invoicing, multi-tenant security, ERP and Flutter apps.",
+    "og_title": "Ahmed Homrani | Full Stack Java Developer",
+    "og_description": "Java, Spring Boot and Angular developer at Audaxis. E-invoicing, ERP, secure multi-tenant platforms and mobile apps.",
+    "og_alt": "Ahmed Homrani, full stack Java developer, with planets representing his projects"
+  },
+  "schema": {
+    "job_title": "Full Stack Java Developer",
+    "master": "Professional Master's in Software Development and New Technologies",
+    "bachelor": "Bachelor's Degree in Computer Science"
+  },
+  "ui": {
+    "skip": "Skip to content",
+    "home_label": "Ahmed Homrani, back to top",
+    "menu": "Menu",
+    "nav_label": "Main",
+    "nav_work": "Work",
+    "nav_experience": "Experience",
+    "nav_about": "About",
+    "nav_contact": "Contact",
+    "lang_label": "Language",
+    "cv": "CV",
+    "cv_pdf": "CV (PDF)",
+    "system_label": "Projects shown as planets",
+    "system_hint": "Each planet is a project. Pick one, or scroll to travel.",
+    "stack": "Tech stack",
+    "visit_site": "Visit the live site",
+    "view_code": "View the code on GitHub",
+    "new_tab": "(opens in a new tab)",
+    "footer": "Hand-built with HTML, CSS and a little JavaScript.",
+    "back_top": "Back to the top",
+    "dismiss": "Dismiss",
+    "suggest": "This site is also available in English.",
+    "suggest_go": "Read in English"
+  },
+  "hero": {
+    "kicker": "Full stack Java developer, Tunis",
+    "lede": "I build secure Java and Angular software for businesses: e-invoicing, ERP systems and multi-tenant platforms that other companies plug into.",
+    "cta_work": "See my work",
+    "cta_cv": "Download CV",
+    "facts": [
+      {
+        "dt": "Now",
+        "dd": "Java Developer at Audaxis"
+      },
+      {
+        "dt": "Education",
+        "dd": "Master's in Software Development, 2026"
+      },
+      {
+        "dt": "Languages",
+        "dd": "Arabic, French, English (C1)"
+      }
+    ]
+  },
+  "projects": {
+    "head": "Selected work",
+    "intro": "Eight projects, from enterprise platforms to mobile apps. Client work is under NDA, so some of them have no public link.",
+    "items": {
+      "smartdigidocs": {
+        "where": "Audaxis",
+        "when": "Aug 2024 to present",
+        "title": "SmartDigiDocs",
+        "summary": "A document platform for electronic invoicing and payments: standards validation, tenant isolation and interoperability with client systems.",
+        "points": [
+          "Designed the QR code validation module: it processes over 5,000 documents and works with more than 100 client systems.",
+          "Built PEPPOL and EN 16931 XML validation, and a module that generates SEPA payment codes.",
+          "Designed a multi-tenant service architecture on OAuth2, SAML and JWT, with RBAC/ABAC, consolidated audit trails and zero-trust boundaries between tenants.",
+          "Added automated SAST and DAST security scans to the Jenkins and Azure DevOps pipelines.",
+          "Managed Active Directory sign-in and access through JNDI Realm and LDAP."
+        ]
+      },
+      "erp": {
+        "where": "Audaxis",
+        "when": "Sep 2023 to Jul 2024",
+        "title": "APIZ & Compiere ERP",
+        "summary": "New features and complex changes on two ERP products, from functional analysis with business teams to deployment.",
+        "points": [
+          "Built features in Java/JEE and Spring Boot on the backend, Angular and TypeScript on the frontend.",
+          "Rewrote slow SQL on PostgreSQL and Oracle, sharply cutting the response times of critical modules.",
+          "Built the APIs that connect the ERP to other business applications.",
+          "Set up automated GitLab CI/CD pipelines running on Docker and Kubernetes."
+        ]
+      },
+      "health": {
+        "where": "ISI, University of Tunis El Manar",
+        "when": "Feb to Jun 2026, internship",
+        "title": "Digital health platform",
+        "summary": "Patients find a doctor, book an appointment in real time and keep their medical records in one secure place.",
+        "points": [
+          "Designed the REST API in Spring Boot with JWT authentication, role-based access and HTTPS.",
+          "Built the Flutter app for iOS and Android so patients see appointments and records on their phone.",
+          "Tuned the Spring Data JPA persistence layer for complex medical data under concurrent load.",
+          "Added real-time notifications for appointment reminders and booking confirmations."
+        ]
+      },
+      "lei": {
+        "where": "Client website",
+        "when": "Nail salon in Tunis",
+        "title": "The Lei Studio",
+        "summary": "A single-page website for a Tunis nail salon: services, prices, opening hours, a map, and one-tap WhatsApp and phone buttons.",
+        "points": [
+          "All texts and prices live in one data file, so updates never touch the components.",
+          "Every push to main builds and deploys to GitHub Pages through GitHub Actions."
+        ]
+      },
+      "smuppy": {
+        "where": "Sport Up",
+        "when": "Mobile app",
+        "title": "Smuppy",
+        "summary": "A social network for sport: a feed and stories, short video reels, local sports events to join, and a map that routes you to nearby gyms.",
+        "points": [],
+        "alt": "Five Smuppy app screens: an event page, the social feed with stories, the splash screen, a map route to a gym, and a video reel"
+      },
+      "reservi": {
+        "where": "Web app",
+        "when": "Tunisia",
+        "title": "Reservi.tn",
+        "summary": "A discovery and booking platform for restaurants, cafés and bars in Tunisia.",
+        "points": [],
+        "alt": "Reservi.tn home page: discover restaurants, cafés and bars in Tunisia"
+      },
+      "hr": {
+        "where": "Digital Power Consulting",
+        "when": "Feb to Jun 2023, internship",
+        "title": "HR Management",
+        "summary": "Espace DPC, an HR portal that connects employees, job candidates and the company.",
+        "points": [
+          "Secure authentication with role-based access control.",
+          "Reusable Angular components that keep every screen consistent."
+        ],
+        "alt": "Espace DPC home page, the HR portal of Digital Power Consulting"
+      },
+      "resaposte": {
+        "where": "La Poste Tunisienne",
+        "when": "Jun to Aug 2022, internship",
+        "title": "ResaPoste",
+        "summary": "Appointment booking for VIP clients of La Poste Tunisienne, so they book a time slot instead of queueing.",
+        "points": [
+          "Scheduling and calendar modules, authentication and protected API endpoints."
+        ],
+        "alt": "ResaPoste home page, branded myPoste, for La Poste Tunisienne clients"
+      }
+    }
+  },
+  "experience": {
+    "head": "Experience",
+    "items": [
+      {
+        "when": "Aug 2024 to present",
+        "title": "Java Developer",
+        "org": "Audaxis, Lac 1, Tunis",
+        "text": "SmartDigiDocs: PEPPOL and EN 16931 validation, SEPA payment codes, QR validation for 100+ client systems, multi-tenant OAuth2/SAML/JWT security, DevSecOps pipelines."
+      },
+      {
+        "when": "Sep 2023 to Jul 2024",
+        "title": "Full Stack Java Developer, ERP Analyst",
+        "org": "Audaxis, Lac 1, Tunis",
+        "text": "APIZ and Compiere ERP: features in Java/JEE, Spring Boot and Angular, SQL tuning on PostgreSQL and Oracle, APIs, GitLab CI/CD on Docker and Kubernetes."
+      },
+      {
+        "when": "Feb 2026 to Jun 2026",
+        "title": "Full Stack Developer Intern",
+        "org": "ISI, Ariana",
+        "text": "Digital health platform with Spring Boot, Angular and Flutter: real-time booking, secure medical records, notifications."
+      },
+      {
+        "when": "Feb 2023 to Jun 2023",
+        "title": "Full Stack Developer Intern",
+        "org": "Digital Power Consulting, Manzah 6",
+        "text": "HR management application with Angular and Spring Boot, role-based access, reusable UI components, Agile team."
+      },
+      {
+        "when": "Jun 2022 to Aug 2022",
+        "title": "Full Stack Developer Intern",
+        "org": "La Poste Tunisienne",
+        "text": "Appointment booking platform for VIP clients with Angular and Spring Boot."
+      }
+    ]
+  },
+  "education": {
+    "head": "Education",
+    "items": [
+      {
+        "when": "2024 to 2026",
+        "title": "Professional Master's in Software Development and New Technologies",
+        "org": "ISI, University of Tunis El Manar"
+      },
+      {
+        "when": "2020 to 2023",
+        "title": "Bachelor's Degree in Computer Science",
+        "org": "ISTIC, University of Carthage"
+      }
+    ]
+  },
+  "skills": {
+    "head": "Skills",
+    "groups": [
+      {
+        "dt": "Backend",
+        "dd": "Java, JEE, Spring Boot, Spring Security, Spring Data, Hibernate, OSGi, Eclipse EMF"
+      },
+      {
+        "dt": "Frontend and mobile",
+        "dd": "Angular, TypeScript, React, HTML5, CSS, Bootstrap, Flutter"
+      },
+      {
+        "dt": "Data and messaging",
+        "dd": "PostgreSQL, Oracle, MongoDB, MySQL, Kafka, RabbitMQ, Apache ActiveMQ"
+      },
+      {
+        "dt": "DevOps and cloud",
+        "dd": "Docker, Kubernetes, GitLab CI/CD, Jenkins, Azure DevOps, Microsoft Azure, Maven"
+      },
+      {
+        "dt": "Security",
+        "dd": "OAuth2, SAML, JWT, RBAC/ABAC, LDAP and Active Directory, SAST and DAST"
+      },
+      {
+        "dt": "AI-assisted development",
+        "dd": "GitHub Copilot, Claude Code, Cursor, prompt engineering"
+      }
+    ]
+  },
+  "about": {
+    "head": "About me",
+    "portrait_alt": "Portrait of Ahmed Homrani",
+    "p": [
+      "I'm a full stack developer from Tunisia with three years of professional Java and Angular work. I care about clean architecture and the unglamorous parts of software: the validation rule that stops a bad invoice, the access check that keeps one tenant out of another's data, the SQL query that makes a report load in seconds.",
+      "I finished a master's in software development alongside my job, and I use AI coding tools every day. One thing about me: I can't sleep with a bug left in my project."
+    ],
+    "facts": [
+      {
+        "dt": "Based in",
+        "dd": "Tunis, Tunisia"
+      },
+      {
+        "dt": "Languages",
+        "dd": "Arabic (native), English (IELTS Academic C1), French (fluent)"
+      },
+      {
+        "dt": "Volunteering",
+        "dd": "Team leader of the Ma3an youth project with the Organisation Nationale Tunisienne des Jeunes; COVID-19 response volunteer with the Tunisian Red Crescent"
+      }
+    ]
+  },
+  "contact": {
+    "head": "Get in touch",
+    "text": "Have a project or a role in mind? Email is the fastest way to reach me."
+  }
+}

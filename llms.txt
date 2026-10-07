@@ -1,0 +1,41 @@
+# Ahmed Homrani
+
+> Ahmed Homrani is a full stack Java developer in Tunis, Tunisia. Since 2023 he has worked at Audaxis, where he builds SmartDigiDocs, a document platform for electronic invoicing and payments (PEPPOL and EN 16931 validation, SEPA payment codes, QR validation interoperable with 100+ client systems, multi-tenant OAuth2/SAML/JWT security). Before that he worked on the APIZ and Compiere ERP products. He holds a Professional Master's in Software Development (ISI, University of Tunis El Manar, 2026).
+
+Key facts:
+- Current role: Java Developer at Audaxis, Lac 1, Tunis (Aug 2024 to present); previously Full Stack Java Developer and ERP Analyst at Audaxis (Sep 2023 to Jul 2024)
+- Core stack: Java, JEE, Spring Boot, Spring Security, OSGi, Angular, TypeScript, PostgreSQL, Oracle, Kafka, Docker, Kubernetes, GitLab CI/CD, Jenkins, Azure DevOps, Flutter
+- Education: Professional Master's in Software Development and New Technologies (ISI, 2024 to 2026); Bachelor's in Computer Science (ISTIC, University of Carthage, 2020 to 2023)
+- Languages: Arabic (native), English (IELTS Academic C1), French (fluent)
+- Contact: contact.ahmedhomrani@gmail.com
+
+## Portfolio
+
+- [English](https://ahmedhomrani.github.io/): projects, experience, skills, contact
+- [Français](https://ahmedhomrani.github.io/fr/)
+- [Español](https://ahmedhomrani.github.io/es/)
+- [Português](https://ahmedhomrani.github.io/pt/)
+- [Full profile in Markdown](https://ahmedhomrani.github.io/llms-full.txt): every role and project in detail
+
+## CV (PDF)
+
+- [English](https://ahmedhomrani.github.io/assets/cv/ahmed-homrani-cv-en.pdf)
+- [Français](https://ahmedhomrani.github.io/assets/cv/ahmed-homrani-cv-fr.pdf)
+- [Español](https://ahmedhomrani.github.io/assets/cv/ahmed-homrani-cv-es.pdf)
+- [Português](https://ahmedhomrani.github.io/assets/cv/ahmed-homrani-cv-pt.pdf)
+
+## Projects
+
+- [SmartDigiDocs](https://ahmedhomrani.github.io/#smartdigidocs): e-invoicing and payments document platform at Audaxis (2024 to present)
+- [APIZ & Compiere ERP](https://ahmedhomrani.github.io/#erp): ERP features, SQL tuning, APIs, CI/CD on Kubernetes (Audaxis, 2023 to 2024)
+- [Digital health platform](https://ahmedhomrani.github.io/#health): Spring Boot, Angular and Flutter, real-time booking and medical records (ISI internship, 2026)
+- [The Lei Studio](https://ahmedhomrani.github.io/the-lei-studio/): React and Vite website for a nail salon in Tunis
+- [Smuppy](https://smuppy-inc.com/): social network app for sport, Flutter and Node.js (Sport Up)
+- [Reservi.tn](https://www.reservi.tn): restaurant, café and bar booking in Tunisia (Angular, Spring Boot)
+- [HR Management](https://ahmedhomrani.github.io/#hr): HR portal for Digital Power Consulting (internship, 2023)
+- [ResaPoste](https://github.com/ahmedhomrani/ResaPoste): VIP appointment booking for La Poste Tunisienne (internship, 2022)
+
+## Elsewhere
+
+- [GitHub](https://github.com/ahmedhomrani)
+- [LinkedIn](https://www.linkedin.com/in/ahmed-homrani)
