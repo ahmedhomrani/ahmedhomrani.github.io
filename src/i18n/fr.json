@@ -7,16 +7,17 @@
   "name": "Français",
   "code": "FR",
   "meta": {
-    "title": "Ahmed Homrani | Développeur Full Stack Java à Tunis",
-    "description": "Ahmed Homrani, développeur full stack Java à Tunis. Spring Boot et Angular : facturation PEPPOL, sécurité multi-tenant, ERP et apps Flutter.",
-    "og_title": "Ahmed Homrani | Développeur Full Stack Java",
-    "og_description": "Développeur Java, Spring Boot et Angular chez Audaxis. Facturation électronique, ERP, plateformes multi-tenant sécurisées et applications mobiles.",
+    "title": "Ahmed Homrani | Développeur Java & Ingénieur Logiciel en Tunisie",
+    "description": "Ahmed Homrani, développeur Java et ingénieur logiciel à Tunis, Tunisie. Spring Boot et Angular : automatisation documentaire, ERP, facturation PEPPOL.",
+    "og_title": "Ahmed Homrani | Développeur Java & Ingénieur Logiciel, Tunisie",
+    "og_description": "Développeur full stack Java chez Audaxis à Tunis. Spring Boot, Angular, automatisation documentaire, ERP, plateformes multi-tenant sécurisées et applications mobiles.",
     "og_alt": "Ahmed Homrani, développeur full stack Java, entouré de planètes qui représentent ses projets"
   },
   "schema": {
     "job_title": "Développeur Full Stack Java",
     "master": "Mastère professionnel en développement logiciel et nouvelles technologies",
-    "bachelor": "Licence en sciences informatiques"
+    "bachelor": "Licence en sciences informatiques",
+    "occupation": "Ingénieur logiciel"
   },
   "ui": {
     "skip": "Aller au contenu",
@@ -40,17 +41,27 @@
     "back_top": "Retour en haut",
     "dismiss": "Fermer",
     "suggest": "Ce site est aussi disponible en français.",
-    "suggest_go": "Lire en français"
+    "suggest_go": "Lire en français",
+    "visit_product": "Voir le site du produit"
   },
   "hero": {
-    "kicker": "Développeur full stack Java, Tunis",
-    "lede": "Je conçois des logiciels Java et Angular sécurisés pour les entreprises : facturation électronique, ERP et plateformes multi-tenant sur lesquelles d'autres entreprises se connectent.",
+    "kicker": "Développeur Java et ingénieur logiciel en Tunisie",
+    "lede": "Je conçois des logiciels Java et Angular sécurisés pour les entreprises : automatisation documentaire, facturation électronique, ERP et plateformes multi-tenant sur lesquelles d'autres entreprises se connectent.",
     "cta_work": "Voir mes projets",
     "cta_cv": "Télécharger le CV",
     "facts": [
-      { "dt": "Aujourd'hui", "dd": "Développeur Java chez Audaxis" },
-      { "dt": "Formation", "dd": "Mastère en développement logiciel, 2026" },
-      { "dt": "Langues", "dd": "Arabe, français, anglais (C1)" }
+      {
+        "dt": "Aujourd'hui",
+        "dd": "Développeur Java chez Audaxis"
+      },
+      {
+        "dt": "Formation",
+        "dd": "Mastère en développement logiciel, 2026"
+      },
+      {
+        "dt": "Langues",
+        "dd": "Arabe, français, anglais (C1)"
+      }
     ]
   },
   "projects": {
@@ -61,7 +72,7 @@
         "where": "Audaxis",
         "when": "Depuis août 2024",
         "title": "SmartDigiDocs",
-        "summary": "Une plateforme documentaire pour la facturation électronique et les paiements : validation des normes, isolation des tenants et interopérabilité avec les systèmes clients.",
+        "summary": "Une plateforme cloud basée à Bruxelles qui automatise la création, la diffusion et la signature électronique de documents personnalisés pour les banques, assureurs, RH et administrations. Je travaille sur son cœur Java : normes, paiements et sécurité.",
         "points": [
           "Conception du module de validation des codes QR : plus de 5 000 documents traités, interopérable avec plus de 100 systèmes clients.",
           "Validation XML aux normes PEPPOL et EN 16931, et module de génération de codes de paiement SEPA.",
@@ -74,7 +85,7 @@
         "where": "Audaxis",
         "when": "Sept. 2023 à juil. 2024",
         "title": "ERP APIZ & Compiere",
-        "summary": "Nouvelles fonctionnalités et évolutions complexes sur deux ERP, de l'analyse fonctionnelle avec les équipes métier jusqu'au déploiement.",
+        "summary": "Nouvelles fonctionnalités et évolutions complexes sur APIZ, l'ERP open source d'Audaxis pour les PME et ETI, et sur Compiere, de l'analyse fonctionnelle avec les équipes métier jusqu'au déploiement.",
         "points": [
           "Développement en Java/JEE et Spring Boot côté backend, Angular et TypeScript côté frontend.",
           "Optimisation des requêtes SQL sous PostgreSQL et Oracle, avec une forte baisse des temps de réponse des modules critiques.",
@@ -85,8 +96,8 @@
       "health": {
         "where": "ISI, Université de Tunis El Manar",
         "when": "Févr. à juin 2026, stage",
-        "title": "Plateforme de santé numérique",
-        "summary": "Les patients trouvent un médecin, réservent un rendez-vous en temps réel et gardent leur dossier médical au même endroit, en toute sécurité.",
+        "title": "Tabibi, plateforme de santé numérique",
+        "summary": "Tabibi.tn aide les patients partout en Tunisie à trouver un médecin, un dentiste, un laboratoire ou une pharmacie et à prendre rendez-vous en ligne. Les médecins disposent de leur propre espace pour gérer rendez-vous et dossiers.",
         "points": [
           "Conception de l'API REST en Spring Boot avec authentification JWT, contrôle d'accès par rôles et HTTPS.",
           "Application Flutter pour iOS et Android : rendez-vous et dossiers médicaux accessibles depuis le téléphone.",
@@ -146,46 +157,126 @@
   "experience": {
     "head": "Parcours",
     "items": [
-      { "when": "Depuis août 2024", "title": "Développeur Java", "org": "Audaxis, Lac 1, Tunis", "text": "SmartDigiDocs : validation PEPPOL et EN 16931, codes de paiement SEPA, validation QR pour plus de 100 systèmes clients, sécurité multi-tenant OAuth2/SAML/JWT, pipelines DevSecOps." },
-      { "when": "Sept. 2023 à juil. 2024", "title": "Développeur Full Stack Java, Analyste ERP", "org": "Audaxis, Lac 1, Tunis", "text": "ERP APIZ et Compiere : fonctionnalités en Java/JEE, Spring Boot et Angular, optimisation SQL sous PostgreSQL et Oracle, API, CI/CD GitLab sur Docker et Kubernetes." },
-      { "when": "Févr. 2026 à juin 2026", "title": "Stagiaire Développeur Full Stack", "org": "ISI, Ariana", "text": "Plateforme de santé numérique en Spring Boot, Angular et Flutter : réservation en temps réel, dossiers médicaux sécurisés, notifications." },
-      { "when": "Févr. 2023 à juin 2023", "title": "Stagiaire Développeur Full Stack", "org": "Digital Power Consulting, Manzah 6", "text": "Application de gestion RH en Angular et Spring Boot, contrôle d'accès par rôles, composants UI réutilisables, équipe Agile." },
-      { "when": "Juin 2022 à août 2022", "title": "Stagiaire Développeur Full Stack", "org": "La Poste Tunisienne", "text": "Plateforme de prise de rendez-vous pour les clients VIP en Angular et Spring Boot." }
+      {
+        "when": "Depuis août 2024",
+        "title": "Développeur Java",
+        "org": "Audaxis, Lac 1, Tunis",
+        "text": "SmartDigiDocs : validation PEPPOL et EN 16931, codes de paiement SEPA, validation QR pour plus de 100 systèmes clients, sécurité multi-tenant OAuth2/SAML/JWT, pipelines DevSecOps."
+      },
+      {
+        "when": "Sept. 2023 à juil. 2024",
+        "title": "Développeur Full Stack Java, Analyste ERP",
+        "org": "Audaxis, Lac 1, Tunis",
+        "text": "ERP APIZ et Compiere : fonctionnalités en Java/JEE, Spring Boot et Angular, optimisation SQL sous PostgreSQL et Oracle, API, CI/CD GitLab sur Docker et Kubernetes."
+      },
+      {
+        "when": "Févr. 2026 à juin 2026",
+        "title": "Stagiaire Développeur Full Stack",
+        "org": "ISI, Ariana",
+        "text": "Plateforme de santé numérique en Spring Boot, Angular et Flutter : réservation en temps réel, dossiers médicaux sécurisés, notifications."
+      },
+      {
+        "when": "Févr. 2023 à juin 2023",
+        "title": "Stagiaire Développeur Full Stack",
+        "org": "Digital Power Consulting, Manzah 6",
+        "text": "Application de gestion RH en Angular et Spring Boot, contrôle d'accès par rôles, composants UI réutilisables, équipe Agile."
+      },
+      {
+        "when": "Juin 2022 à août 2022",
+        "title": "Stagiaire Développeur Full Stack",
+        "org": "La Poste Tunisienne",
+        "text": "Plateforme de prise de rendez-vous pour les clients VIP en Angular et Spring Boot."
+      }
     ]
   },
   "education": {
     "head": "Formation",
     "items": [
-      { "when": "2024 à 2026", "title": "Mastère professionnel en développement logiciel et nouvelles technologies", "org": "ISI, Université de Tunis El Manar" },
-      { "when": "2020 à 2023", "title": "Licence en sciences informatiques", "org": "ISTIC, Université de Carthage" }
+      {
+        "when": "2024 à 2026",
+        "title": "Mastère professionnel en développement logiciel et nouvelles technologies",
+        "org": "ISI, Université de Tunis El Manar"
+      },
+      {
+        "when": "2020 à 2023",
+        "title": "Licence en sciences informatiques",
+        "org": "ISTIC, Université de Carthage"
+      }
     ]
   },
   "skills": {
     "head": "Compétences",
     "groups": [
-      { "dt": "Backend", "dd": "Java, JEE, Spring Boot, Spring Security, Spring Data, Hibernate, OSGi, Eclipse EMF" },
-      { "dt": "Frontend et mobile", "dd": "Angular, TypeScript, React, HTML5, CSS, Bootstrap, Flutter" },
-      { "dt": "Données et messagerie", "dd": "PostgreSQL, Oracle, MongoDB, MySQL, Kafka, RabbitMQ, Apache ActiveMQ" },
-      { "dt": "DevOps et cloud", "dd": "Docker, Kubernetes, GitLab CI/CD, Jenkins, Azure DevOps, Microsoft Azure, Maven" },
-      { "dt": "Sécurité", "dd": "OAuth2, SAML, JWT, RBAC/ABAC, LDAP et Active Directory, SAST et DAST" },
-      { "dt": "Développement assisté par IA", "dd": "GitHub Copilot, Claude Code, Cursor, ingénierie de prompt" }
+      {
+        "dt": "Backend",
+        "dd": "Java, JEE, Spring Boot, Spring Security, Spring Data, Hibernate, OSGi, Eclipse EMF"
+      },
+      {
+        "dt": "Frontend et mobile",
+        "dd": "Angular, TypeScript, React, HTML5, CSS, Bootstrap, Flutter"
+      },
+      {
+        "dt": "Données et messagerie",
+        "dd": "PostgreSQL, Oracle, MongoDB, MySQL, Kafka, RabbitMQ, Apache ActiveMQ"
+      },
+      {
+        "dt": "DevOps et cloud",
+        "dd": "Docker, Kubernetes, GitLab CI/CD, Jenkins, Azure DevOps, Microsoft Azure, Maven"
+      },
+      {
+        "dt": "Sécurité",
+        "dd": "OAuth2, SAML, JWT, RBAC/ABAC, LDAP et Active Directory, SAST et DAST"
+      },
+      {
+        "dt": "Développement assisté par IA",
+        "dd": "GitHub Copilot, Claude Code, Cursor, ingénierie de prompt"
+      }
     ]
   },
   "about": {
     "head": "À propos",
     "portrait_alt": "Portrait d'Ahmed Homrani",
     "p": [
-      "Je suis développeur full stack, basé en Tunisie, avec trois ans d'expérience professionnelle en Java et Angular. Je tiens à la Clean Architecture et aux parties discrètes du logiciel : la règle de validation qui bloque une facture erronée, le contrôle d'accès qui empêche un tenant de voir les données d'un autre, la requête SQL qui fait charger un rapport en quelques secondes.",
+      "Je suis développeur Java et ingénieur logiciel, basé à Tunis, avec trois ans d'expérience professionnelle en Java et Angular. Je tiens à la Clean Architecture et aux parties discrètes du logiciel : la règle de validation qui bloque une facture erronée, le contrôle d'accès qui empêche un tenant de voir les données d'un autre, la requête SQL qui fait charger un rapport en quelques secondes.",
       "J'ai terminé un mastère en développement logiciel en parallèle de mon poste, et j'utilise des outils de développement assisté par IA au quotidien. Un trait de caractère : je ne peux pas dormir avec un bug dans mon projet."
     ],
     "facts": [
-      { "dt": "Basé à", "dd": "Tunis, Tunisie" },
-      { "dt": "Langues", "dd": "Arabe (langue maternelle), anglais (IELTS Academic C1), français (courant)" },
-      { "dt": "Bénévolat", "dd": "Chef d'équipe du projet jeunesse Ma3an avec l'Organisation Nationale Tunisienne des Jeunes ; bénévole du Croissant-Rouge tunisien pendant la réponse au COVID-19" }
+      {
+        "dt": "Basé à",
+        "dd": "Tunis, Tunisie"
+      },
+      {
+        "dt": "Langues",
+        "dd": "Arabe (langue maternelle), anglais (IELTS Academic C1), français (courant)"
+      },
+      {
+        "dt": "Bénévolat",
+        "dd": "Chef d'équipe du projet jeunesse Ma3an avec l'",
+        "link": {
+          "text": "Organisation Nationale Tunisienne des Jeunes",
+          "href": "https://jamaity.org/association/organisation-national-tunisienne-des-jeunes/",
+          "after": " ; bénévole du Croissant-Rouge tunisien pendant la réponse au COVID-19"
+        }
+      }
     ]
   },
   "contact": {
     "head": "Me contacter",
-    "text": "Un projet ou un poste en tête ? L'e-mail est le moyen le plus rapide de me joindre."
+    "text": "Un projet, un poste ou une question ? Envoyez-moi un message ici, ou écrivez-moi directement sur WhatsApp.",
+    "f_name": "Nom",
+    "f_email": "E-mail",
+    "f_subject": "Objet",
+    "f_message": "Message",
+    "f_send": "Envoyer le message",
+    "f_sending": "Envoi…",
+    "f_ok": "Merci, votre message est bien parti. Je vous répondrai à l'adresse indiquée.",
+    "f_err": "Le message n'a pas pu être envoyé. Écrivez-moi directement à contact.ahmedhomrani@gmail.com.",
+    "f_invalid": "Merci de remplir tous les champs avec une adresse e-mail valide.",
+    "f_privacy": "Vos coordonnées servent uniquement à vous répondre.",
+    "mail_subject": "Nouveau message depuis votre portfolio (FR)",
+    "direct_head": "Vous préférez un contact direct ?",
+    "wa_label": "M'écrire sur WhatsApp",
+    "email_label": "M'envoyer un e-mail",
+    "whatsapp_text": "Bonjour Ahmed, je vous contacte depuis votre site web ({site})."
   }
 }

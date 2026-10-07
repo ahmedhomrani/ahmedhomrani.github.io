@@ -11,12 +11,16 @@ Output: /index.html (English, x-default), /fr/, /es/, /pt/ and sitemap.xml.
 import datetime
 import json
 import pathlib
+from urllib.parse import quote
 
 from jinja2 import Environment, FileSystemLoader, StrictUndefined
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / "src"
 SITE = "https://ahmedhomrani.github.io"
+CONTACT_EMAIL = "contact.ahmedhomrani@gmail.com"   # where website messages arrive (FormSubmit)
+WHATSAPP = "21699340980"                          # international format, no + or spaces
+PHONE_DISPLAY = "+216 99 340 980"
 LANG_ORDER = ["en", "fr", "es", "pt"]
 TODAY = datetime.date.today().isoformat()
 
@@ -27,13 +31,16 @@ ORBITS = [(70, 13, -3, 40), (102, 18, -11, 160), (134, 24, -6, 280), (166, 31, -
 PROJECTS = [
     {"id": "smartdigidocs", "color": "#7fb2ff", "surface": "ice", "ring": True,
      "stack": ["Java", "OSGi", "Eclipse EMF", "Angular", "OAuth2", "SAML", "JWT", "LDAP", "Jenkins", "Azure DevOps", "Docker", "Maven"],
-     "schema": "SoftwareApplication"},
+     "links": [{"href": "https://www.smartdigidocs.com/", "label": "visit_product"}],
+     "schema": "SoftwareApplication", "url": "https://www.smartdigidocs.com/"},
     {"id": "erp", "color": "#e0683f", "surface": "rock", "ring": False,
      "stack": ["Java", "JEE", "Spring Boot", "Angular", "TypeScript", "PostgreSQL", "Oracle", "Docker", "Kubernetes", "GitLab CI/CD"],
-     "schema": "SoftwareApplication"},
+     "links": [{"href": "https://www.apiz-erp.com/", "label": "visit_product"}],
+     "schema": "SoftwareApplication", "url": "https://www.apiz-erp.com/"},
     {"id": "health", "color": "#f28cb1", "surface": "gas", "ring": False,
      "stack": ["Java", "Spring Boot", "Spring Security", "Spring Data JPA", "Angular", "Flutter", "Dart", "PostgreSQL", "Kafka"],
-     "schema": "SoftwareApplication"},
+     "links": [{"href": "https://tabibi.tn/", "label": "visit_site"}],
+     "schema": "WebApplication", "url": "https://tabibi.tn/"},
     {"id": "lei", "color": "#d3bf9f", "surface": "pearl", "ring": True,
      "stack": ["React", "Vite", "CSS", "GitHub Actions", "GitHub Pages"],
      "links": [{"href": "https://ahmedhomrani.github.io/the-lei-studio/", "label": "visit_site"}],
@@ -41,8 +48,8 @@ PROJECTS = [
     {"id": "smuppy", "color": "#2fd3a6", "surface": "gas", "ring": False,
      "stack": ["Flutter", "Dart", "Node.js"],
      "img": {"src": "smuppy.webp", "w": 1200, "h": 848},
-     "links": [{"href": "https://smuppy-inc.com/", "label": "visit_site"}],
-     "schema": "MobileApplication", "url": "https://smuppy-inc.com/"},
+     "links": [{"href": "https://www.smuppy.com/", "label": "visit_site"}],
+     "schema": "MobileApplication", "url": "https://www.smuppy.com/"},
     {"id": "reservi", "color": "#a8774f", "surface": "crater", "ring": False,
      "stack": ["Angular", "Spring Boot", "Java"],
      "img": {"src": "reservi.webp", "w": 1200, "h": 538},
@@ -100,8 +107,17 @@ def jsonld(t):
              "isPartOf": {"@id": f"{SITE}/#website"}, "mainEntity": {"@id": person}, "dateModified": TODAY},
             {"@type": "Person", "@id": person, "name": "Ahmed Homrani", "givenName": "Ahmed", "familyName": "Homrani",
              "url": f"{SITE}/", "image": f"{SITE}/assets/img/ahmed-homrani.webp",
-             "email": "mailto:contact.ahmedhomrani@gmail.com", "jobTitle": t["schema"]["job_title"],
-             "worksFor": {"@type": "Organization", "name": "Audaxis"},
+             "email": f"mailto:{CONTACT_EMAIL}", "telephone": PHONE_DISPLAY.replace(" ", ""),
+             "jobTitle": [t["schema"]["job_title"], t["schema"]["occupation"]],
+             "hasOccupation": {"@type": "Occupation", "name": t["schema"]["occupation"],
+                               "occupationLocation": {"@type": "Country", "name": "Tunisia"},
+                               "skills": "Java, Spring Boot, Angular, OSGi, PEPPOL, OAuth2, PostgreSQL, Docker, Kubernetes, Flutter"},
+             "contactPoint": {"@type": "ContactPoint", "contactType": "professional inquiries", "email": CONTACT_EMAIL,
+                              "telephone": PHONE_DISPLAY.replace(" ", ""), "availableLanguage": ["ar", "fr", "en"],
+                              "url": f"https://wa.me/{WHATSAPP}"},
+             "worksFor": {"@type": "Organization", "name": "Audaxis", "url": "https://www.apiz-erp.com/"},
+             "memberOf": {"@type": "Organization", "name": "Organisation Nationale Tunisienne des Jeunes (ONTJ)",
+                          "url": "https://jamaity.org/association/organisation-national-tunisienne-des-jeunes/"},
              "alumniOf": [
                  {"@type": "CollegeOrUniversity", "name": "ISI, University of Tunis El Manar"},
                  {"@type": "CollegeOrUniversity", "name": "ISTIC, University of Carthage"}],
@@ -153,7 +169,10 @@ def main():
     suggest = {l["lang"]: {"text": l["ui"]["suggest"], "go": l["ui"]["suggest_go"], "path": l["path"]} for l in langs}
     version = TODAY.replace("-", "")
     for t in langs:
+        wa_text = t["contact"]["whatsapp_text"].replace("{site}", SITE.replace("https://", "") + t["path"].rstrip("/"))
         html = tpl.render(t=t, langs=langs, projects=PROJECTS, site=SITE, jsonld=jsonld(t), year=TODAY[:4],
+                          contact_email=CONTACT_EMAIL, whatsapp=WHATSAPP, phone=PHONE_DISPLAY,
+                          wa_href=f"https://wa.me/{WHATSAPP}?text={quote(wa_text)}",
                           version=version, suggest_json=json.dumps(suggest, ensure_ascii=False).replace("</", "<\\/"))
         out = ROOT / t["path"].strip("/") / "index.html" if t["path"] != "/" else ROOT / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)

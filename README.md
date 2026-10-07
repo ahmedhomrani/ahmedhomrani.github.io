@@ -62,3 +62,10 @@ In **Settings > Pages**, Source is **Deploy from a branch**, folder `/ (root)`.
 1. Google Search Console: add `https://ahmedhomrani.github.io/`, submit `sitemap.xml`, then check **International targeting** reports no hreflang errors.
 2. Bing Webmaster Tools: import from Search Console.
 3. Put the portfolio URL in your LinkedIn and GitHub "Website" fields.
+
+## Contact form and WhatsApp
+
+- The form posts to [FormSubmit](https://formsubmit.co) (free, no backend). Messages arrive at `CONTACT_EMAIL` in `src/build.py`.
+- First use: send one test message from the live site, then click **Activate** in the email FormSubmit sends you. Until then the form shows an error and suggests emailing directly.
+- To hide your address from the page source, replace `CONTACT_EMAIL` with the random alias FormSubmit gives you after activation, then rebuild.
+- WhatsApp: `WHATSAPP` in `src/build.py`. The pre-filled text is `contact.whatsapp_text` in each language file.

@@ -7,16 +7,17 @@
   "name": "English",
   "code": "EN",
   "meta": {
-    "title": "Ahmed Homrani | Full Stack Java Developer in Tunis",
-    "description": "Ahmed Homrani, full stack Java developer in Tunis. Spring Boot and Angular: PEPPOL e-invoicing, multi-tenant security, ERP and Flutter apps.",
-    "og_title": "Ahmed Homrani | Full Stack Java Developer",
-    "og_description": "Java, Spring Boot and Angular developer at Audaxis. E-invoicing, ERP, secure multi-tenant platforms and mobile apps.",
+    "title": "Ahmed Homrani | Java Developer & Software Engineer in Tunisia",
+    "description": "Ahmed Homrani, Java developer and software engineer in Tunis, Tunisia. Spring Boot and Angular: document automation, ERP, PEPPOL e-invoicing, Flutter apps.",
+    "og_title": "Ahmed Homrani | Java Developer & Software Engineer, Tunisia",
+    "og_description": "Full stack Java developer at Audaxis in Tunis. Spring Boot, Angular, document automation, ERP, secure multi-tenant platforms and mobile apps.",
     "og_alt": "Ahmed Homrani, full stack Java developer, with planets representing his projects"
   },
   "schema": {
     "job_title": "Full Stack Java Developer",
     "master": "Professional Master's in Software Development and New Technologies",
-    "bachelor": "Bachelor's Degree in Computer Science"
+    "bachelor": "Bachelor's Degree in Computer Science",
+    "occupation": "Software Engineer"
   },
   "ui": {
     "skip": "Skip to content",
@@ -40,11 +41,12 @@
     "back_top": "Back to the top",
     "dismiss": "Dismiss",
     "suggest": "This site is also available in English.",
-    "suggest_go": "Read in English"
+    "suggest_go": "Read in English",
+    "visit_product": "Visit the product website"
   },
   "hero": {
-    "kicker": "Full stack Java developer, Tunis",
-    "lede": "I build secure Java and Angular software for businesses: e-invoicing, ERP systems and multi-tenant platforms that other companies plug into.",
+    "kicker": "Java developer and software engineer in Tunisia",
+    "lede": "I build secure Java and Angular software for businesses: document automation, e-invoicing, ERP systems and multi-tenant platforms that other companies plug into.",
     "cta_work": "See my work",
     "cta_cv": "Download CV",
     "facts": [
@@ -70,7 +72,7 @@
         "where": "Audaxis",
         "when": "Aug 2024 to present",
         "title": "SmartDigiDocs",
-        "summary": "A document platform for electronic invoicing and payments: standards validation, tenant isolation and interoperability with client systems.",
+        "summary": "A Brussels-based cloud platform that automates the creation, distribution and e-signature of personalized documents for banks, insurers, HR teams and public agencies. I work on its Java core: standards, payments and security.",
         "points": [
           "Designed the QR code validation module: it processes over 5,000 documents and works with more than 100 client systems.",
           "Built PEPPOL and EN 16931 XML validation, and a module that generates SEPA payment codes.",
@@ -83,7 +85,7 @@
         "where": "Audaxis",
         "when": "Sep 2023 to Jul 2024",
         "title": "APIZ & Compiere ERP",
-        "summary": "New features and complex changes on two ERP products, from functional analysis with business teams to deployment.",
+        "summary": "New features and complex changes on APIZ, Audaxis's open-source ERP for mid-sized companies, and on Compiere, from functional analysis with business teams to deployment.",
         "points": [
           "Built features in Java/JEE and Spring Boot on the backend, Angular and TypeScript on the frontend.",
           "Rewrote slow SQL on PostgreSQL and Oracle, sharply cutting the response times of critical modules.",
@@ -94,8 +96,8 @@
       "health": {
         "where": "ISI, University of Tunis El Manar",
         "when": "Feb to Jun 2026, internship",
-        "title": "Digital health platform",
-        "summary": "Patients find a doctor, book an appointment in real time and keep their medical records in one secure place.",
+        "title": "Tabibi, digital health platform",
+        "summary": "Tabibi.tn helps patients across Tunisia find a doctor, dentist, lab or pharmacy and book an appointment online. Doctors get their own space to manage bookings and records.",
         "points": [
           "Designed the REST API in Spring Boot with JWT authentication, role-based access and HTTPS.",
           "Built the Flutter app for iOS and Android so patients see appointments and records on their phone.",
@@ -235,7 +237,7 @@
     "head": "About me",
     "portrait_alt": "Portrait of Ahmed Homrani",
     "p": [
-      "I'm a full stack developer from Tunisia with three years of professional Java and Angular work. I care about clean architecture and the unglamorous parts of software: the validation rule that stops a bad invoice, the access check that keeps one tenant out of another's data, the SQL query that makes a report load in seconds.",
+      "I'm a Java developer and software engineer based in Tunis, Tunisia, with three years of professional Java and Angular work. I care about clean architecture and the unglamorous parts of software: the validation rule that stops a bad invoice, the access check that keeps one tenant out of another's data, the SQL query that makes a report load in seconds.",
       "I finished a master's in software development alongside my job, and I use AI coding tools every day. One thing about me: I can't sleep with a bug left in my project."
     ],
     "facts": [
@@ -249,12 +251,32 @@
       },
       {
         "dt": "Volunteering",
-        "dd": "Team leader of the Ma3an youth project with the Organisation Nationale Tunisienne des Jeunes; COVID-19 response volunteer with the Tunisian Red Crescent"
+        "dd": "Team leader of the Ma3an youth project with the ",
+        "link": {
+          "text": "Organisation Nationale Tunisienne des Jeunes",
+          "href": "https://jamaity.org/association/organisation-national-tunisienne-des-jeunes/",
+          "after": "; COVID-19 response volunteer with the Tunisian Red Crescent"
+        }
       }
     ]
   },
   "contact": {
     "head": "Get in touch",
-    "text": "Have a project or a role in mind? Email is the fastest way to reach me."
+    "text": "Have a project, a role or a question? Send a message here, or reach me directly on WhatsApp.",
+    "f_name": "Name",
+    "f_email": "Email",
+    "f_subject": "Subject",
+    "f_message": "Message",
+    "f_send": "Send message",
+    "f_sending": "Sending…",
+    "f_ok": "Thanks, your message is on its way. I'll reply to the email you gave.",
+    "f_err": "The message couldn't be sent. Please email me directly at contact.ahmedhomrani@gmail.com.",
+    "f_invalid": "Please fill in every field with a valid email address.",
+    "f_privacy": "Your details are only used to reply to you.",
+    "mail_subject": "New message from your portfolio (EN)",
+    "direct_head": "Prefer to talk directly?",
+    "wa_label": "Message me on WhatsApp",
+    "email_label": "Email me",
+    "whatsapp_text": "Hello Ahmed, I'm contacting you from your website ({site})."
   }
 }

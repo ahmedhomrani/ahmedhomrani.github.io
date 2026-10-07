@@ -1,9 +1,10 @@
 # Ahmed Homrani: full profile
 
-> Full stack Java developer in Tunis, Tunisia. Three years of professional work with Java, Spring Boot and Angular, currently at Audaxis. Portfolio available in English, French, Spanish and Portuguese.
+> Java developer and software engineer (full stack) in Tunis, Tunisia. Three years of professional work with Java, Spring Boot and Angular, currently at Audaxis. Portfolio available in English, French, Spanish and Portuguese.
 
 Website: https://ahmedhomrani.github.io/ (FR /fr/, ES /es/, PT /pt/)
 Email: contact.ahmedhomrani@gmail.com
+WhatsApp: +216 99 340 980 (https://wa.me/21699340980)
 GitHub: https://github.com/ahmedhomrani
 LinkedIn: https://www.linkedin.com/in/ahmed-homrani
 CV: https://ahmedhomrani.github.io/assets/cv/ahmed-homrani-cv-en.pdf
@@ -15,7 +16,7 @@ Full stack Java/Angular/Spring Boot developer with experience in microservice ar
 ## Experience
 
 ### Java Developer, Audaxis, Lac 1, Tunisia (August 2024 to present)
-Product: SmartDigiDocs
+Product: SmartDigiDocs (https://www.smartdigidocs.com/), a Brussels-based cloud platform automating personalized documents for banks, insurers, HR and public agencies
 - Integrated automated SAST and DAST security audits into Jenkins and Azure DevOps pipelines (DevSecOps).
 - Designed a multi-tenant service architecture on OAuth2, SAML and JWT: RBAC/ABAC enforcement, consolidated audit trails, zero-trust alignment across tenant boundaries.
 - Developed a module that generates SEPA payment codes.
@@ -27,7 +28,7 @@ Product: SmartDigiDocs
 Environment: Java, Angular, OSGi, Eclipse EMF, Jenkins, Docker, Git, GitLab CI/CD, Maven
 
 ### Full Stack Java Developer, ERP Analyst, Audaxis, Lac 1, Tunisia (September 2023 to July 2024)
-Products: APIZ and Compiere ERP
+Products: APIZ (https://www.apiz-erp.com/), Audaxis's open-source ERP for mid-sized companies, and Compiere
 - Designed and implemented new features and complex changes with Java/JEE, Spring Boot (backend) and Angular/TypeScript (frontend).
 - Functional analysis, fast diagnosis and resolution of critical bugs.
 - Optimised SQL on PostgreSQL and Oracle, sharply reducing response times of critical ERP modules.
@@ -37,7 +38,7 @@ Products: APIZ and Compiere ERP
 Environment: Java, JEE, Spring Boot, Angular, TypeScript, PostgreSQL, Oracle, Docker, Kubernetes, Git, GitLab CI/CD
 
 ### Full Stack Developer Intern, ISI, Ariana, Tunisia (February 2026 to June 2026)
-- Designed and built a digital health platform connecting patients and doctors, with real-time appointment booking and secure medical records.
+- Designed and built Tabibi (https://tabibi.tn/), a digital health platform connecting patients and doctors, with real-time appointment booking and secure medical records.
 - REST API in Java Spring Boot with JWT authentication, role-based access control and HTTPS.
 - Cross-platform Flutter app for iOS and Android.
 - Spring Data JPA persistence layer tuned for complex medical data under concurrent load.
@@ -55,7 +56,7 @@ Environment: Java, Spring Security, Spring Boot, TypeScript, Angular, MySQL, Git
 
 ## Other projects
 - The Lei Studio: React and Vite website for a nail salon in Tunis, deployed with GitHub Actions. https://ahmedhomrani.github.io/the-lei-studio/
-- Smuppy (Sport Up): social network app for sport built with Flutter and Node.js. https://smuppy-inc.com/
+- Smuppy (Sport Up): social network app for sport built with Flutter and Node.js. https://www.smuppy.com/
 - Reservi.tn: discovery and booking platform for restaurants, cafés and bars in Tunisia (Angular, Spring Boot). https://www.reservi.tn
 
 ## Skills
@@ -76,5 +77,5 @@ Environment: Java, Spring Security, Spring Boot, TypeScript, Angular, MySQL, Git
 - French: fluent
 
 ## Volunteering
-- Team Leader, Organisation Nationale Tunisienne des Jeunes: led the Ma3an youth project.
+- Team Leader, Organisation Nationale Tunisienne des Jeunes (https://jamaity.org/association/organisation-national-tunisienne-des-jeunes/): led the Ma3an youth project.
 - Volunteer, Tunisian Red Crescent: COVID-19 response.

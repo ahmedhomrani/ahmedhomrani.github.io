@@ -31,6 +31,62 @@
     });
   }
 
+  /* ---------- Contact form: sends through FormSubmit to my inbox ---------- */
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+  if (form && status) {
+    const say = (kind, text) => {
+      status.className = 'form-status ' + kind;
+      status.textContent = text;
+      status.focus({ preventScroll: true });
+    };
+    // Back from a no-JS submission
+    if (new URLSearchParams(location.search).has('sent')) say('ok', status.dataset.ok);
+
+    const btn = form.querySelector('button[type="submit"]');
+    const fields = ['name', 'email', 'subject', 'message'].map((n) => form.elements[n]);
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      let firstBad = null;
+      fields.forEach((f) => {
+        const bad = !f.value.trim() || !f.checkValidity();
+        f.setAttribute('aria-invalid', String(bad));
+        if (bad && !firstBad) firstBad = f;
+      });
+      if (firstBad) { say('err', status.dataset.invalid); firstBad.focus(); return; }
+      if (form.elements._honey.value) return; // bot
+
+      btn.disabled = true;
+      btn.textContent = btn.dataset.sending;
+      const data = Object.fromEntries(new FormData(form));
+      data._subject = `${data._subject}: ${data.subject}`;
+      data._replyto = data.email;
+      data.page = location.href;
+      delete data._next;
+      try {
+        const res = await fetch(form.dataset.ajax, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const json = await res.json().catch(() => ({}));
+        if (!res.ok || String(json.success) !== 'true') throw new Error(json.message || res.status);
+        form.reset();
+        fields.forEach((f) => f.removeAttribute('aria-invalid'));
+        say('ok', status.dataset.ok);
+      } catch (err) {
+        say('err', status.dataset.err);
+      } finally {
+        btn.disabled = false;
+        btn.textContent = btn.dataset.label;
+      }
+    });
+    fields.forEach((f) => f.addEventListener('input', () => {
+      if (f.getAttribute('aria-invalid') === 'true' && f.value.trim() && f.checkValidity()) f.setAttribute('aria-invalid', 'false');
+    }));
+  }
+
   /* ---------- Language: remember the choice, suggest (never force) a better match ---------- */
   const current = (document.documentElement.lang || 'en').slice(0, 2);
   document.querySelectorAll('.lang a[data-lang]').forEach((a) =>
