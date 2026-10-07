@@ -1,4 +1,4 @@
-# robots.txt for https://ahmedhomrani.github.io/
+# robots.txt for https://ahmedhomrani.tn/
 # Everything here is public and meant to be found, by search engines and AI assistants alike.
 
 User-agent: *
@@ -21,4 +21,4 @@ User-agent: Meta-ExternalAgent
 User-agent: MistralAI-User
 Allow: /
 
-Sitemap: https://ahmedhomrani.github.io/sitemap.xml
+Sitemap: https://ahmedhomrani.tn/sitemap.xml

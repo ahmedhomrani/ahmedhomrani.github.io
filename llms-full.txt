@@ -2,12 +2,12 @@
 
 > Java developer and software engineer (full stack) in Tunis, Tunisia. Three years of professional work with Java, Spring Boot and Angular, currently at Audaxis. Portfolio available in English, French, Spanish and Portuguese.
 
-Website: https://ahmedhomrani.github.io/ (FR /fr/, ES /es/, PT /pt/)
+Website: https://ahmedhomrani.tn/ (FR /fr/, ES /es/, PT /pt/)
 Email: contact.ahmedhomrani@gmail.com
 WhatsApp: +216 99 340 980 (https://wa.me/21699340980)
 GitHub: https://github.com/ahmedhomrani
 LinkedIn: https://www.linkedin.com/in/ahmed-homrani
-CV: https://ahmedhomrani.github.io/assets/cv/ahmed-homrani-cv-en.pdf
+CV: https://ahmedhomrani.tn/assets/cv/ahmed-homrani-cv-en.pdf
 
 ## Profile
 
@@ -55,7 +55,7 @@ Environment: Java, Spring Security, Spring Boot, TypeScript, Angular, MySQL, Git
 - Code: https://github.com/ahmedhomrani/ResaPoste
 
 ## Other projects
-- The Lei Studio: React and Vite website for a nail salon in Tunis, deployed with GitHub Actions. https://ahmedhomrani.github.io/the-lei-studio/
+- The Lei Studio: React and Vite website for a nail salon in Tunis, deployed with GitHub Actions. https://ahmedhomrani.tn/the-lei-studio/
 - Smuppy (Sport Up): social network app for sport built with Flutter and Node.js. https://www.smuppy.com/
 - Reservi.tn: discovery and booking platform for restaurants, cafés and bars in Tunisia (Angular, Spring Boot). https://www.reservi.tn
 

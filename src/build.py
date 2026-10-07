@@ -17,7 +17,7 @@ from jinja2 import Environment, FileSystemLoader, StrictUndefined
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / "src"
-SITE = "https://ahmedhomrani.github.io"
+SITE = "https://ahmedhomrani.tn"
 CONTACT_EMAIL = "contact.ahmedhomrani@gmail.com"   # where website messages arrive (FormSubmit)
 WHATSAPP = "21699340980"                          # international format, no + or spaces
 PHONE_DISPLAY = "+216 99 340 980"
@@ -43,8 +43,8 @@ PROJECTS = [
      "schema": "WebApplication", "url": "https://tabibi.tn/"},
     {"id": "lei", "color": "#d3bf9f", "surface": "pearl", "ring": True,
      "stack": ["React", "Vite", "CSS", "GitHub Actions", "GitHub Pages"],
-     "links": [{"href": "https://ahmedhomrani.github.io/the-lei-studio/", "label": "visit_site"}],
-     "schema": "WebSite", "url": "https://ahmedhomrani.github.io/the-lei-studio/"},
+     "links": [{"href": "https://ahmedhomrani.tn/the-lei-studio/", "label": "visit_site"}],
+     "schema": "WebSite", "url": "https://ahmedhomrani.tn/the-lei-studio/"},
     {"id": "smuppy", "color": "#2fd3a6", "surface": "gas", "ring": False,
      "stack": ["Flutter", "Dart", "Node.js"],
      "img": {"src": "smuppy.webp", "w": 1200, "h": 848},

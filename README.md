@@ -1,11 +1,11 @@
 # ahmedhomrani.github.io
 
 Personal portfolio of Ahmed Homrani, full stack Java developer in Tunis.
-Live at https://ahmedhomrani.github.io/ in four languages:
-[English](https://ahmedhomrani.github.io/) ·
-[Français](https://ahmedhomrani.github.io/fr/) ·
-[Español](https://ahmedhomrani.github.io/es/) ·
-[Português](https://ahmedhomrani.github.io/pt/)
+Live at https://ahmedhomrani.tn/ (custom domain via the `CNAME` file; DNS at OVH) in four languages:
+[English](https://ahmedhomrani.tn/) ·
+[Français](https://ahmedhomrani.tn/fr/) ·
+[Español](https://ahmedhomrani.tn/es/) ·
+[Português](https://ahmedhomrani.tn/pt/)
 
 Each project is a planet. The hero shows them orbiting the sun, and scrolling flies you past each one.
 
@@ -59,7 +59,7 @@ In **Settings > Pages**, Source is **Deploy from a branch**, folder `/ (root)`.
 
 ## After deploying
 
-1. Google Search Console: add `https://ahmedhomrani.github.io/`, submit `sitemap.xml`, then check **International targeting** reports no hreflang errors.
+1. Google Search Console: add `https://ahmedhomrani.tn/`, submit `sitemap.xml`, then check **International targeting** reports no hreflang errors.
 2. Bing Webmaster Tools: import from Search Console.
 3. Put the portfolio URL in your LinkedIn and GitHub "Website" fields.
 

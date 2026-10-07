@@ -7,32 +7,32 @@ Key facts:
 - Core stack: Java, JEE, Spring Boot, Spring Security, OSGi, Angular, TypeScript, PostgreSQL, Oracle, Kafka, Docker, Kubernetes, GitLab CI/CD, Jenkins, Azure DevOps, Flutter
 - Education: Professional Master's in Software Development and New Technologies (ISI, 2024 to 2026); Bachelor's in Computer Science (ISTIC, University of Carthage, 2020 to 2023)
 - Languages: Arabic (native), English (IELTS Academic C1), French (fluent)
-- Contact: contact.ahmedhomrani@gmail.com, WhatsApp +216 99 340 980 (https://wa.me/21699340980), or the contact form at https://ahmedhomrani.github.io/#contact
+- Contact: contact.ahmedhomrani@gmail.com, WhatsApp +216 99 340 980 (https://wa.me/21699340980), or the contact form at https://ahmedhomrani.tn/#contact
 
 ## Portfolio
 
-- [English](https://ahmedhomrani.github.io/): projects, experience, skills, contact
-- [Français](https://ahmedhomrani.github.io/fr/)
-- [Español](https://ahmedhomrani.github.io/es/)
-- [Português](https://ahmedhomrani.github.io/pt/)
-- [Full profile in Markdown](https://ahmedhomrani.github.io/llms-full.txt): every role and project in detail
+- [English](https://ahmedhomrani.tn/): projects, experience, skills, contact
+- [Français](https://ahmedhomrani.tn/fr/)
+- [Español](https://ahmedhomrani.tn/es/)
+- [Português](https://ahmedhomrani.tn/pt/)
+- [Full profile in Markdown](https://ahmedhomrani.tn/llms-full.txt): every role and project in detail
 
 ## CV (PDF)
 
-- [English](https://ahmedhomrani.github.io/assets/cv/ahmed-homrani-cv-en.pdf)
-- [Français](https://ahmedhomrani.github.io/assets/cv/ahmed-homrani-cv-fr.pdf)
-- [Español](https://ahmedhomrani.github.io/assets/cv/ahmed-homrani-cv-es.pdf)
-- [Português](https://ahmedhomrani.github.io/assets/cv/ahmed-homrani-cv-pt.pdf)
+- [English](https://ahmedhomrani.tn/assets/cv/ahmed-homrani-cv-en.pdf)
+- [Français](https://ahmedhomrani.tn/assets/cv/ahmed-homrani-cv-fr.pdf)
+- [Español](https://ahmedhomrani.tn/assets/cv/ahmed-homrani-cv-es.pdf)
+- [Português](https://ahmedhomrani.tn/assets/cv/ahmed-homrani-cv-pt.pdf)
 
 ## Projects
 
 - [SmartDigiDocs](https://www.smartdigidocs.com/): document automation platform (creation, distribution, e-signature of personalized documents); Ahmed works on its Java core at Audaxis (2024 to present)
 - [APIZ & Compiere ERP](https://www.apiz-erp.com/): ERP features, SQL tuning, APIs, CI/CD on Kubernetes (Audaxis, 2023 to 2024)
 - [Tabibi digital health platform](https://tabibi.tn/): Spring Boot, Angular and Flutter, real-time booking and medical records (ISI internship, 2026)
-- [The Lei Studio](https://ahmedhomrani.github.io/the-lei-studio/): React and Vite website for a nail salon in Tunis
+- [The Lei Studio](https://ahmedhomrani.tn/the-lei-studio/): React and Vite website for a nail salon in Tunis
 - [Smuppy](https://www.smuppy.com/): social network app for sport, Flutter and Node.js (Sport Up)
 - [Reservi.tn](https://www.reservi.tn): restaurant, café and bar booking in Tunisia (Angular, Spring Boot)
-- [HR Management](https://ahmedhomrani.github.io/#hr): HR portal for Digital Power Consulting (internship, 2023)
+- [HR Management](https://ahmedhomrani.tn/#hr): HR portal for Digital Power Consulting (internship, 2023)
 - [ResaPoste](https://github.com/ahmedhomrani/ResaPoste): VIP appointment booking for La Poste Tunisienne (internship, 2022)
 
 ## Elsewhere

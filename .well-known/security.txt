@@ -1,4 +1,4 @@
 Contact: mailto:contact.ahmedhomrani@gmail.com
 Expires: 2027-10-07T00:00:00.000Z
 Preferred-Languages: en, fr, ar
-Canonical: https://ahmedhomrani.github.io/.well-known/security.txt
+Canonical: https://ahmedhomrani.tn/.well-known/security.txt
