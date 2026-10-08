@@ -113,7 +113,8 @@
         "points": [
           "All texts and prices live in one data file, so updates never touch the components.",
           "Every push to main builds and deploys to GitHub Pages through GitHub Actions."
-        ]
+        ],
+        "alt": "The Lei Studio home page: logo, salon name and WhatsApp booking buttons"
       },
       "smuppy": {
         "where": "Sport Up",

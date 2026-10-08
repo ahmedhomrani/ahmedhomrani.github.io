@@ -277,6 +277,15 @@ main, .nav, .foot { position: relative; z-index: 1; }
   display: flex; flex-direction: column; padding: 22px; border-radius: 12px;
   background: var(--surface); box-shadow: inset 0 0 0 1px var(--line);
 }
+.other { overflow: hidden; }
+.thumb {
+  margin: -22px -22px 18px; aspect-ratio: 16 / 9; overflow: hidden;
+  background: var(--bg); border-bottom: 1px solid var(--line);
+}
+.thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform .4s ease; }
+.other:hover .thumb img { transform: scale(1.03); }
+#smuppy .thumb img { object-fit: contain; padding: 10px; background: #0f2a2c; }
+#reservi .thumb img { object-position: left top; }
 .other .where { font-size: var(--t-sm); margin-bottom: 6px; }
 .other .where .when { font-weight: 400; }
 .other h4 { font-size: 1.2rem; margin-bottom: 8px; }

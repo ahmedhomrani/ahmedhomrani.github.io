@@ -144,7 +144,10 @@
       <div class="others">
 {% for p in projects if not p.featured %}{% set it = t.projects["items"][p.id] %}
         <article class="other" id="{{ p.id }}" aria-labelledby="{{ p.id }}-title">
-          <p class="where">{{ it.where }}<span class="when"> {{ it.when }}</span></p>
+{% if p.img %}          <figure class="thumb">
+            <img src="/assets/img/{{ p.img.src }}" width="{{ p.img.w }}" height="{{ p.img.h }}" loading="lazy" decoding="async" alt="{{ it.alt }}">
+          </figure>
+{% endif %}          <p class="where">{{ it.where }}<span class="when"> {{ it.when }}</span></p>
           <h4 id="{{ p.id }}-title">{{ it.title }}</h4>
           <p class="summary">{{ it.summary }}</p>
           <ul class="stack" aria-label="{{ t.ui.stack }}">

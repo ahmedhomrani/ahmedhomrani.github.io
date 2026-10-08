@@ -46,6 +46,7 @@ PROJECTS = [
      "schema": "WebApplication", "url": "https://tabibi.tn/"},
     {"id": "lei", "color": "#d3bf9f", "surface": "pearl", "ring": True,
      "stack": ["React", "Vite", "CSS", "GitHub Actions", "GitHub Pages"],
+     "img": {"src": "lei-studio.webp", "w": 799, "h": 455},
      "links": [{"href": "https://ahmedhomrani.tn/the-lei-studio/", "label": "visit_site"}],
      "schema": "WebSite", "url": "https://ahmedhomrani.tn/the-lei-studio/"},
     {"id": "smuppy", "color": "#2fd3a6", "surface": "gas", "ring": False,
@@ -149,7 +150,7 @@ def sitemap(langs):
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
              '        xmlns:xhtml="http://www.w3.org/1999/xhtml"',
              '        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">']
-    imgs = ["ahmed-homrani.webp"]
+    imgs = ["ahmed-homrani.webp"] + [p["img"]["src"] for p in PROJECTS if p["img"]]
     for t in langs:
         lines.append("  <url>")
         lines.append(f"    <loc>{SITE}{t['path']}</loc>")

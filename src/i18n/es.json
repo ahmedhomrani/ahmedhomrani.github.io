@@ -113,7 +113,8 @@
         "points": [
           "Todos los textos y precios están en un único archivo de datos, así que las actualizaciones no tocan los componentes.",
           "Cada push a main compila y despliega el sitio en GitHub Pages con GitHub Actions."
-        ]
+        ],
+        "alt": "Página de inicio de The Lei Studio: logo, nombre del salón y botones de reserva por WhatsApp"
       },
       "smuppy": {
         "where": "Sport Up",
