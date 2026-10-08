@@ -7,7 +7,7 @@ Live at https://ahmedhomrani.tn/ (custom domain via the `CNAME` file; DNS at OVH
 [Español](https://ahmedhomrani.tn/es/) ·
 [Português](https://ahmedhomrani.tn/pt/)
 
-Each project is a planet. The hero shows them orbiting the sun, and scrolling flies you past each one.
+Light and dark themes, one typeface (Hanken Grotesk), and a dot-grid background that reacts to the cursor. Three case studies, then other projects.
 
 ## How it works
 
@@ -35,9 +35,9 @@ src/build.py          project data that is not translated, JSON-LD, sitemap
 
 Never edit the generated `index.html` files by hand: the next build overwrites them.
 
-## Add a project (a new planet)
+## Add a project
 
-1. Add an entry to `PROJECTS` in `src/build.py`: `id`, `color`, `surface` (`ice`, `rock`, `pearl`, `gas`, `crater`, `storm`, `sand`), `ring`, `stack`, optional `img` and `links`. Add a line to `ORBITS` as well.
+1. Add an entry to `PROJECTS` in `src/build.py`: `id`, `stack`, optional `links`, and `"featured": True` to show it as a case study. (`color`, `surface`, `ring`, `img` are legacy and unused.)
 2. Add the same `id` under `projects.items` in all four JSON files.
 3. Build. The script refuses to build if a language is missing a project.
 

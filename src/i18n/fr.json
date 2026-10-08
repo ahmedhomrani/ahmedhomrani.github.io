@@ -11,7 +11,7 @@
     "description": "Ahmed Homrani, développeur Java et ingénieur logiciel à Tunis, Tunisie. Spring Boot et Angular : automatisation documentaire, ERP, facturation PEPPOL.",
     "og_title": "Ahmed Homrani | Développeur Java & Ingénieur Logiciel, Tunisie",
     "og_description": "Développeur full stack Java chez Audaxis à Tunis. Spring Boot, Angular, automatisation documentaire, ERP, plateformes multi-tenant sécurisées et applications mobiles.",
-    "og_alt": "Ahmed Homrani, développeur full stack Java, entouré de planètes qui représentent ses projets"
+    "og_alt": "Ahmed Homrani, développeur Java et ingénieur logiciel en Tunisie"
   },
   "schema": {
     "job_title": "Développeur Full Stack Java",
@@ -31,18 +31,18 @@
     "lang_label": "Langue",
     "cv": "CV",
     "cv_pdf": "CV (PDF)",
-    "system_label": "Projets représentés par des planètes",
-    "system_hint": "Chaque planète est un projet. Choisissez-en une, ou faites défiler pour voyager.",
     "stack": "Technologies",
     "visit_site": "Voir le site en ligne",
     "view_code": "Voir le code sur GitHub",
     "new_tab": "(s'ouvre dans un nouvel onglet)",
-    "footer": "Conçu à la main en HTML, CSS et un peu de JavaScript.",
+    "footer": "Basé à Tunis, Tunisie.",
     "back_top": "Retour en haut",
     "dismiss": "Fermer",
     "suggest": "Ce site est aussi disponible en français.",
     "suggest_go": "Lire en français",
-    "visit_product": "Voir le site du produit"
+    "visit_product": "Voir le site du produit",
+    "other_head": "Autres projets",
+    "featured_head": "Études de cas"
   },
   "hero": {
     "kicker": "Développeur Java et ingénieur logiciel en Tunisie",
@@ -235,7 +235,7 @@
   },
   "about": {
     "head": "À propos",
-    "portrait_alt": "Portrait d'Ahmed Homrani",
+    "portrait_alt": "Ahmed Homrani, développeur Java",
     "p": [
       "Je suis développeur Java et ingénieur logiciel, basé à Tunis, avec trois ans d'expérience professionnelle en Java et Angular. Je tiens à la Clean Architecture et aux parties discrètes du logiciel : la règle de validation qui bloque une facture erronée, le contrôle d'accès qui empêche un tenant de voir les données d'un autre, la requête SQL qui fait charger un rapport en quelques secondes.",
       "J'ai terminé un mastère en développement logiciel en parallèle de mon poste, et j'utilise des outils de développement assisté par IA au quotidien. Un trait de caractère : je ne peux pas dormir avec un bug dans mon projet."

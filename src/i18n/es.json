@@ -11,7 +11,7 @@
     "description": "Ahmed Homrani, desarrollador Java e ingeniero de software en Túnez. Spring Boot y Angular: automatización documental, ERP, facturación PEPPOL.",
     "og_title": "Ahmed Homrani | Desarrollador Java e Ingeniero de Software, Túnez",
     "og_description": "Desarrollador full stack Java en Audaxis, Túnez. Spring Boot, Angular, automatización documental, ERP, plataformas multi-tenant seguras y apps móviles.",
-    "og_alt": "Ahmed Homrani, desarrollador full stack Java, rodeado de planetas que representan sus proyectos"
+    "og_alt": "Ahmed Homrani, desarrollador Java e ingeniero de software en Túnez"
   },
   "schema": {
     "job_title": "Desarrollador Full Stack Java",
@@ -31,18 +31,18 @@
     "lang_label": "Idioma",
     "cv": "CV",
     "cv_pdf": "CV (PDF)",
-    "system_label": "Proyectos representados como planetas",
-    "system_hint": "Cada planeta es un proyecto. Elige uno o desplázate para viajar.",
     "stack": "Tecnologías",
     "visit_site": "Ver el sitio en vivo",
     "view_code": "Ver el código en GitHub",
     "new_tab": "(se abre en una pestaña nueva)",
-    "footer": "Hecho a mano con HTML, CSS y un poco de JavaScript.",
+    "footer": "Con base en Túnez.",
     "back_top": "Volver arriba",
     "dismiss": "Cerrar",
     "suggest": "Este sitio también está disponible en español.",
     "suggest_go": "Leer en español",
-    "visit_product": "Ver el sitio del producto"
+    "visit_product": "Ver el sitio del producto",
+    "other_head": "Otros proyectos",
+    "featured_head": "Casos destacados"
   },
   "hero": {
     "kicker": "Desarrollador Java e ingeniero de software en Túnez",
@@ -235,7 +235,7 @@
   },
   "about": {
     "head": "Sobre mí",
-    "portrait_alt": "Retrato de Ahmed Homrani",
+    "portrait_alt": "Ahmed Homrani, desarrollador Java",
     "p": [
       "Soy desarrollador Java e ingeniero de software, con base en Túnez, con tres años de experiencia profesional en Java y Angular. Me importan la Clean Architecture y las partes discretas del software: la regla de validación que frena una factura errónea, el control de acceso que impide a un cliente ver los datos de otro, la consulta SQL que hace que un informe cargue en segundos.",
       "Terminé un máster en desarrollo de software mientras trabajaba, y uso herramientas de desarrollo con IA a diario. Algo sobre mí: no puedo dormir si queda un bug en mi proyecto."

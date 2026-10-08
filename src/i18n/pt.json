@@ -11,7 +11,7 @@
     "description": "Ahmed Homrani, desenvolvedor Java e engenheiro de software em Túnis, Tunísia. Spring Boot e Angular: automação de documentos, ERP, faturamento PEPPOL.",
     "og_title": "Ahmed Homrani | Desenvolvedor Java e Engenheiro de Software, Tunísia",
     "og_description": "Desenvolvedor full stack Java na Audaxis, em Túnis. Spring Boot, Angular, automação de documentos, ERP, plataformas multi-tenant seguras e aplicativos móveis.",
-    "og_alt": "Ahmed Homrani, desenvolvedor full stack Java, cercado de planetas que representam seus projetos"
+    "og_alt": "Ahmed Homrani, desenvolvedor Java e engenheiro de software na Tunísia"
   },
   "schema": {
     "job_title": "Desenvolvedor Full Stack Java",
@@ -31,18 +31,18 @@
     "lang_label": "Idioma",
     "cv": "CV",
     "cv_pdf": "CV (PDF)",
-    "system_label": "Projetos representados como planetas",
-    "system_hint": "Cada planeta é um projeto. Escolha um ou role a página para viajar.",
     "stack": "Tecnologias",
     "visit_site": "Ver o site no ar",
     "view_code": "Ver o código no GitHub",
     "new_tab": "(abre em uma nova aba)",
-    "footer": "Feito à mão com HTML, CSS e um pouco de JavaScript.",
+    "footer": "Baseado em Túnis, Tunísia.",
     "back_top": "Voltar ao topo",
     "dismiss": "Fechar",
     "suggest": "Este site também está disponível em português.",
     "suggest_go": "Ler em português",
-    "visit_product": "Ver o site do produto"
+    "visit_product": "Ver o site do produto",
+    "other_head": "Outros projetos",
+    "featured_head": "Projetos em destaque"
   },
   "hero": {
     "kicker": "Desenvolvedor Java e engenheiro de software na Tunísia",
@@ -235,7 +235,7 @@
   },
   "about": {
     "head": "Sobre mim",
-    "portrait_alt": "Retrato de Ahmed Homrani",
+    "portrait_alt": "Ahmed Homrani, desenvolvedor Java",
     "p": [
       "Sou desenvolvedor Java e engenheiro de software, baseado em Túnis, com três anos de experiência profissional em Java e Angular. Me importo com Clean Architecture e com as partes discretas do software: a regra de validação que barra uma fatura errada, o controle de acesso que impede um cliente de ver os dados de outro, a consulta SQL que faz um relatório carregar em segundos.",
       "Concluí um mestrado em desenvolvimento de software enquanto trabalhava, e uso ferramentas de desenvolvimento com IA todos os dias. Uma curiosidade: não consigo dormir com um bug no meu projeto."

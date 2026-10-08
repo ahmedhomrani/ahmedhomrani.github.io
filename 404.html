@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lost in space | Ahmed Homrani</title>
+  <title>Page not found | Ahmed Homrani</title>
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#0c1124">
+  <meta name="theme-color" content="#f5f6f8">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/css/main.css">
   <style>
@@ -13,20 +13,20 @@
     .lost h1 { font-size: var(--t-xl); font-weight: 800; }
     .lost p { color: var(--dust); max-width: 40ch; }
     .lost-langs { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-    .lost .planet { --c: var(--p-erp); --size: 160px; margin-bottom: 12px; }
+    .lost .code { font-size: .95rem; font-weight: 600; color: var(--accent); }
   </style>
 </head>
 <body>
-  <canvas id="stars" aria-hidden="true"></canvas>
+  <canvas id="field" aria-hidden="true"></canvas>
   <main class="lost">
-    <div class="planet planet--crater" aria-hidden="true"><div class="body"></div></div>
-    <h1>This page drifted out of orbit</h1>
+    <p class="code">404</p>
+    <h1>This page doesn't exist</h1>
     <p>The address doesn't match anything on this site. Pick your language to head back home.</p>
     <ul class="lost-langs">
-      <li><a class="btn btn-sun" href="/" hreflang="en" lang="en">English</a></li>
-      <li><a class="btn btn-ghost" href="/fr/" hreflang="fr" lang="fr">Français</a></li>
-      <li><a class="btn btn-ghost" href="/es/" hreflang="es" lang="es">Español</a></li>
-      <li><a class="btn btn-ghost" href="/pt/" hreflang="pt" lang="pt-BR">Português</a></li>
+      <li><a class="btn btn-primary" href="/" hreflang="en" lang="en">English</a></li>
+      <li><a class="btn btn-secondary" href="/fr/" hreflang="fr" lang="fr">Français</a></li>
+      <li><a class="btn btn-secondary" href="/es/" hreflang="es" lang="es">Español</a></li>
+      <li><a class="btn btn-secondary" href="/pt/" hreflang="pt" lang="pt-BR">Português</a></li>
     </ul>
   </main>
   <script src="/assets/js/main.js" defer></script>

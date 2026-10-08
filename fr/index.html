@@ -13,8 +13,9 @@
   <link rel="alternate" hreflang="es" href="https://ahmedhomrani.tn/es/">
   <link rel="alternate" hreflang="pt" href="https://ahmedhomrani.tn/pt/">
   <link rel="alternate" hreflang="x-default" href="https://ahmedhomrani.tn/">
-  <meta name="theme-color" content="#0c1124">
-  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#f5f6f8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b1019" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
 
   <meta property="og:type" content="profile">
   <meta property="og:site_name" content="Ahmed Homrani">
@@ -24,7 +25,7 @@
   <meta property="og:image" content="https://ahmedhomrani.tn/assets/img/og-fr.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Ahmed Homrani, développeur full stack Java, entouré de planètes qui représentent ses projets">
+  <meta property="og:image:alt" content="Ahmed Homrani, développeur Java et ingénieur logiciel en Tunisie">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:locale:alternate" content="es_ES">
@@ -36,7 +37,7 @@
   <meta name="twitter:title" content="Ahmed Homrani | Développeur Java &amp; Ingénieur Logiciel, Tunisie">
   <meta name="twitter:description" content="Développeur full stack Java chez Audaxis à Tunis. Spring Boot, Angular, automatisation documentaire, ERP, plateformes multi-tenant sécurisées et applications mobiles.">
   <meta name="twitter:image" content="https://ahmedhomrani.tn/assets/img/og-fr.png">
-  <meta name="twitter:image:alt" content="Ahmed Homrani, développeur full stack Java, entouré de planètes qui représentent ses projets">
+  <meta name="twitter:image:alt" content="Ahmed Homrani, développeur Java et ingénieur logiciel en Tunisie">
 
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -48,11 +49,10 @@
   <link rel="me" href="https://github.com/ahmedhomrani">
   <link rel="me" href="https://www.linkedin.com/in/ahmed-homrani">
 
-  <link rel="preload" href="/assets/fonts/bricolage-grotesque-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/hanken-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
   <script>document.documentElement.classList.add('js')</script>
-  <link rel="stylesheet" href="/assets/css/main.css?v=20261007">
-  <script src="/assets/js/main.js?v=20261007" defer></script>
+  <link rel="stylesheet" href="/assets/css/main.css?v=20261008">
+  <script src="/assets/js/main.js?v=20261008" defer></script>
 
   <script type="application/ld+json">
 {
@@ -86,7 +86,7 @@
       "mainEntity": {
         "@id": "https://ahmedhomrani.tn/#person"
       },
-      "dateModified": "2026-10-07"
+      "dateModified": "2026-10-08"
     },
     {
       "@type": "Person",
@@ -347,11 +347,11 @@
 </head>
 <body>
   <a class="skip" href="#main">Aller au contenu</a>
-  <canvas id="stars" aria-hidden="true"></canvas>
+  <canvas id="field" aria-hidden="true"></canvas>
 
   <header class="nav" id="top">
     <a class="brand" href="/fr/#top" aria-label="Ahmed Homrani, retour en haut">
-      <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><circle cx="16" cy="16" r="9" fill="var(--sun)"/><ellipse cx="16" cy="16" rx="15" ry="5" fill="none" stroke="var(--starlight)" stroke-width="1.4" transform="rotate(-20 16 16)"/></svg>
+      <span class="brand-mark" aria-hidden="true">AH</span>
       <span>Ahmed Homrani</span>
     </a>
 
@@ -394,8 +394,8 @@
         <h1 id="hero-title">Ahmed Homrani</h1>
         <p class="lede">Je conçois des logiciels Java et Angular sécurisés pour les entreprises : automatisation documentaire, facturation électronique, ERP et plateformes multi-tenant sur lesquelles d&#39;autres entreprises se connectent.</p>
         <div class="cta">
-          <a class="btn btn-sun" href="#work">Voir mes projets</a>
-          <a class="btn btn-ghost" href="/assets/cv/ahmed-homrani-cv-fr.pdf" download>Télécharger le CV</a>
+          <a class="btn btn-primary" href="#work">Voir mes projets</a>
+          <a class="btn btn-secondary" href="/assets/cv/ahmed-homrani-cv-fr.pdf" download>Télécharger le CV</a>
         </div>
         <dl class="hero-facts">
           <div><dt>Aujourd&#39;hui</dt><dd>Développeur Java chez Audaxis</dd></div>
@@ -403,198 +403,139 @@
           <div><dt>Langues</dt><dd>Arabe, français, anglais (C1)</dd></div>
         </dl>
       </div>
-
-      <div class="system" role="navigation" aria-label="Projets représentés par des planètes">
-        <div class="sun" aria-hidden="true"></div>
-        <div class="orbits">
-          <div class="orbit" style="--r:70px;--t:13s;--d:-3s;--a:40deg"><a class="moon" href="#smartdigidocs" style="--c:#7fb2ff"><span>SmartDigiDocs</span></a></div>
-          <div class="orbit" style="--r:102px;--t:18s;--d:-11s;--a:160deg"><a class="moon" href="#erp" style="--c:#e0683f"><span>ERP APIZ &amp; Compiere</span></a></div>
-          <div class="orbit" style="--r:134px;--t:24s;--d:-6s;--a:280deg"><a class="moon" href="#health" style="--c:#f28cb1"><span>Tabibi, plateforme de santé numérique</span></a></div>
-          <div class="orbit" style="--r:166px;--t:31s;--d:-22s;--a:100deg"><a class="moon" href="#lei" style="--c:#d3bf9f"><span>The Lei Studio</span></a></div>
-          <div class="orbit" style="--r:198px;--t:39s;--d:-30s;--a:220deg"><a class="moon" href="#smuppy" style="--c:#2fd3a6"><span>Smuppy</span></a></div>
-          <div class="orbit" style="--r:230px;--t:48s;--d:-9s;--a:340deg"><a class="moon" href="#reservi" style="--c:#a8774f"><span>Reservi.tn</span></a></div>
-          <div class="orbit" style="--r:262px;--t:58s;--d:-47s;--a:10deg"><a class="moon" href="#hr" style="--c:#9a86ff"><span>Gestion RH</span></a></div>
-          <div class="orbit" style="--r:294px;--t:70s;--d:-15s;--a:130deg"><a class="moon" href="#resaposte" style="--c:#f4c430"><span>ResaPoste</span></a></div>
-        </div>
-        <p class="system-hint">Chaque planète est un projet. Choisissez-en une, ou faites défiler pour voyager.</p>
-      </div>
+      <figure class="hero-portrait">
+        <img src="/assets/img/ahmed-homrani.webp" width="534" height="467" fetchpriority="high" decoding="async" alt="Ahmed Homrani, développeur Java">
+      </figure>
     </section>
 
-    <section class="journey" id="work" aria-labelledby="work-title">
+    <section class="work" id="work" aria-labelledby="work-title">
       <header class="section-head">
         <h2 id="work-title">Projets choisis</h2>
         <p>Huit projets, des plateformes d&#39;entreprise aux applications mobiles. Les projets clients sont sous NDA : certains n&#39;ont donc pas de lien public.</p>
       </header>
 
-      <article class="world" id="smartdigidocs" style="--c:#7fb2ff" aria-labelledby="smartdigidocs-title">
-        <div class="planet-wrap" aria-hidden="true">
-          <div class="planet planet--ice"><div class="ring ring--back"></div><div class="body"></div><div class="ring ring--front"></div></div>
-        </div>
-        <div class="world-info">
-          <p class="where">Audaxis</p>
-          <p class="when">Depuis août 2024</p>
-          <h3 id="smartdigidocs-title">SmartDigiDocs</h3>
-          <p class="summary">Une plateforme cloud basée à Bruxelles qui automatise la création, la diffusion et la signature électronique de documents personnalisés pour les banques, assureurs, RH et administrations. Je travaille sur son cœur Java : normes, paiements et sécurité.</p>
-          <ul class="points">
-            <li>Conception du module de validation des codes QR : plus de 5 000 documents traités, interopérable avec plus de 100 systèmes clients.</li>
-            <li>Validation XML aux normes PEPPOL et EN 16931, et module de génération de codes de paiement SEPA.</li>
-            <li>Architecture de services multi-tenant basée sur OAuth2, SAML et JWT : contrôle d&#39;accès RBAC/ABAC, pistes d&#39;audit centralisées et principes Zero Trust entre les tenants.</li>
-            <li>Intégration d&#39;audits de sécurité SAST et DAST automatisés dans les pipelines Jenkins et Azure DevOps.</li>
-            <li>Gestion de l&#39;authentification et des accès Active Directory via JNDI Realm et LDAP.</li>
-          </ul>
-          <ul class="stack" aria-label="Technologies">
-            <li>Java</li><li>OSGi</li><li>Eclipse EMF</li><li>Angular</li><li>OAuth2</li><li>SAML</li><li>JWT</li><li>LDAP</li><li>Jenkins</li><li>Azure DevOps</li><li>Docker</li><li>Maven</li>
-          </ul>
-          <p class="links"><a href="https://www.smartdigidocs.com/" target="_blank" rel="noopener">Voir le site du produit<span class="sr"> (s&#39;ouvre dans un nouvel onglet)</span></a></p>
-        </div>
-      </article>
+      <h3 class="group-head">Études de cas</h3>
+      <div class="cases">
 
-      <article class="world world--flip" id="erp" style="--c:#e0683f" aria-labelledby="erp-title">
-        <div class="planet-wrap" aria-hidden="true">
-          <div class="planet planet--rock"><div class="body"></div></div>
-        </div>
-        <div class="world-info">
-          <p class="where">Audaxis</p>
-          <p class="when">Sept. 2023 à juil. 2024</p>
-          <h3 id="erp-title">ERP APIZ &amp; Compiere</h3>
-          <p class="summary">Nouvelles fonctionnalités et évolutions complexes sur APIZ, l&#39;ERP open source d&#39;Audaxis pour les PME et ETI, et sur Compiere, de l&#39;analyse fonctionnelle avec les équipes métier jusqu&#39;au déploiement.</p>
-          <ul class="points">
-            <li>Développement en Java/JEE et Spring Boot côté backend, Angular et TypeScript côté frontend.</li>
-            <li>Optimisation des requêtes SQL sous PostgreSQL et Oracle, avec une forte baisse des temps de réponse des modules critiques.</li>
-            <li>Création des API qui relient l&#39;ERP aux autres applications métier.</li>
-            <li>Mise en place de pipelines CI/CD automatisés sous GitLab, sur Docker et Kubernetes.</li>
-          </ul>
-          <ul class="stack" aria-label="Technologies">
-            <li>Java</li><li>JEE</li><li>Spring Boot</li><li>Angular</li><li>TypeScript</li><li>PostgreSQL</li><li>Oracle</li><li>Docker</li><li>Kubernetes</li><li>GitLab CI/CD</li>
-          </ul>
-          <p class="links"><a href="https://www.apiz-erp.com/" target="_blank" rel="noopener">Voir le site du produit<span class="sr"> (s&#39;ouvre dans un nouvel onglet)</span></a></p>
-        </div>
-      </article>
+        <article class="case" id="smartdigidocs" aria-labelledby="smartdigidocs-title">
+          <div class="case-meta">
+            <p class="where">Audaxis</p>
+            <p class="when">Depuis août 2024</p>
+            <p class="links"><a href="https://www.smartdigidocs.com/" target="_blank" rel="noopener">Voir le site du produit<span class="sr"> (s&#39;ouvre dans un nouvel onglet)</span></a></p>
+          </div>
+          <div class="case-body">
+            <h4 id="smartdigidocs-title">SmartDigiDocs</h4>
+            <p class="summary">Une plateforme cloud basée à Bruxelles qui automatise la création, la diffusion et la signature électronique de documents personnalisés pour les banques, assureurs, RH et administrations. Je travaille sur son cœur Java : normes, paiements et sécurité.</p>
+            <ul class="points">
+              <li>Conception du module de validation des codes QR : plus de 5 000 documents traités, interopérable avec plus de 100 systèmes clients.</li>
+              <li>Validation XML aux normes PEPPOL et EN 16931, et module de génération de codes de paiement SEPA.</li>
+              <li>Architecture de services multi-tenant basée sur OAuth2, SAML et JWT : contrôle d&#39;accès RBAC/ABAC, pistes d&#39;audit centralisées et principes Zero Trust entre les tenants.</li>
+              <li>Intégration d&#39;audits de sécurité SAST et DAST automatisés dans les pipelines Jenkins et Azure DevOps.</li>
+              <li>Gestion de l&#39;authentification et des accès Active Directory via JNDI Realm et LDAP.</li>
+            </ul>
+            <ul class="stack" aria-label="Technologies">
+              <li>Java</li><li>OSGi</li><li>Eclipse EMF</li><li>Angular</li><li>OAuth2</li><li>SAML</li><li>JWT</li><li>LDAP</li><li>Jenkins</li><li>Azure DevOps</li><li>Docker</li><li>Maven</li>
+            </ul>
+          </div>
+        </article>
 
-      <article class="world" id="health" style="--c:#f28cb1" aria-labelledby="health-title">
-        <div class="planet-wrap" aria-hidden="true">
-          <div class="planet planet--gas"><div class="body"></div></div>
-        </div>
-        <div class="world-info">
-          <p class="where">ISI, Université de Tunis El Manar</p>
-          <p class="when">Févr. à juin 2026, stage</p>
-          <h3 id="health-title">Tabibi, plateforme de santé numérique</h3>
-          <p class="summary">Tabibi.tn aide les patients partout en Tunisie à trouver un médecin, un dentiste, un laboratoire ou une pharmacie et à prendre rendez-vous en ligne. Les médecins disposent de leur propre espace pour gérer rendez-vous et dossiers.</p>
-          <ul class="points">
-            <li>Conception de l&#39;API REST en Spring Boot avec authentification JWT, contrôle d&#39;accès par rôles et HTTPS.</li>
-            <li>Application Flutter pour iOS et Android : rendez-vous et dossiers médicaux accessibles depuis le téléphone.</li>
-            <li>Couche de persistance Spring Data JPA optimisée pour des données médicales complexes sous charge concurrente.</li>
-            <li>Notifications en temps réel pour les rappels de rendez-vous et les confirmations de réservation.</li>
-          </ul>
-          <ul class="stack" aria-label="Technologies">
-            <li>Java</li><li>Spring Boot</li><li>Spring Security</li><li>Spring Data JPA</li><li>Angular</li><li>Flutter</li><li>Dart</li><li>PostgreSQL</li><li>Kafka</li>
-          </ul>
-          <p class="links"><a href="https://tabibi.tn/" target="_blank" rel="noopener">Voir le site en ligne<span class="sr"> (s&#39;ouvre dans un nouvel onglet)</span></a></p>
-        </div>
-      </article>
+        <article class="case" id="erp" aria-labelledby="erp-title">
+          <div class="case-meta">
+            <p class="where">Audaxis</p>
+            <p class="when">Sept. 2023 à juil. 2024</p>
+            <p class="links"><a href="https://www.apiz-erp.com/" target="_blank" rel="noopener">Voir le site du produit<span class="sr"> (s&#39;ouvre dans un nouvel onglet)</span></a></p>
+          </div>
+          <div class="case-body">
+            <h4 id="erp-title">ERP APIZ &amp; Compiere</h4>
+            <p class="summary">Nouvelles fonctionnalités et évolutions complexes sur APIZ, l&#39;ERP open source d&#39;Audaxis pour les PME et ETI, et sur Compiere, de l&#39;analyse fonctionnelle avec les équipes métier jusqu&#39;au déploiement.</p>
+            <ul class="points">
+              <li>Développement en Java/JEE et Spring Boot côté backend, Angular et TypeScript côté frontend.</li>
+              <li>Optimisation des requêtes SQL sous PostgreSQL et Oracle, avec une forte baisse des temps de réponse des modules critiques.</li>
+              <li>Création des API qui relient l&#39;ERP aux autres applications métier.</li>
+              <li>Mise en place de pipelines CI/CD automatisés sous GitLab, sur Docker et Kubernetes.</li>
+            </ul>
+            <ul class="stack" aria-label="Technologies">
+              <li>Java</li><li>JEE</li><li>Spring Boot</li><li>Angular</li><li>TypeScript</li><li>PostgreSQL</li><li>Oracle</li><li>Docker</li><li>Kubernetes</li><li>GitLab CI/CD</li>
+            </ul>
+          </div>
+        </article>
 
-      <article class="world world--flip" id="lei" style="--c:#d3bf9f" aria-labelledby="lei-title">
-        <div class="planet-wrap" aria-hidden="true">
-          <div class="planet planet--pearl"><div class="ring ring--back"></div><div class="body"></div><div class="ring ring--front"></div></div>
-        </div>
-        <div class="world-info">
-          <p class="where">Site client</p>
-          <p class="when">Salon de manucure à Tunis</p>
-          <h3 id="lei-title">The Lei Studio</h3>
+        <article class="case" id="health" aria-labelledby="health-title">
+          <div class="case-meta">
+            <p class="where">ISI, Université de Tunis El Manar</p>
+            <p class="when">Févr. à juin 2026, stage</p>
+            <p class="links"><a href="https://tabibi.tn/" target="_blank" rel="noopener">Voir le site en ligne<span class="sr"> (s&#39;ouvre dans un nouvel onglet)</span></a></p>
+          </div>
+          <div class="case-body">
+            <h4 id="health-title">Tabibi, plateforme de santé numérique</h4>
+            <p class="summary">Tabibi.tn aide les patients partout en Tunisie à trouver un médecin, un dentiste, un laboratoire ou une pharmacie et à prendre rendez-vous en ligne. Les médecins disposent de leur propre espace pour gérer rendez-vous et dossiers.</p>
+            <ul class="points">
+              <li>Conception de l&#39;API REST en Spring Boot avec authentification JWT, contrôle d&#39;accès par rôles et HTTPS.</li>
+              <li>Application Flutter pour iOS et Android : rendez-vous et dossiers médicaux accessibles depuis le téléphone.</li>
+              <li>Couche de persistance Spring Data JPA optimisée pour des données médicales complexes sous charge concurrente.</li>
+              <li>Notifications en temps réel pour les rappels de rendez-vous et les confirmations de réservation.</li>
+            </ul>
+            <ul class="stack" aria-label="Technologies">
+              <li>Java</li><li>Spring Boot</li><li>Spring Security</li><li>Spring Data JPA</li><li>Angular</li><li>Flutter</li><li>Dart</li><li>PostgreSQL</li><li>Kafka</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+
+      <h3 class="group-head">Autres projets</h3>
+      <div class="others">
+
+        <article class="other" id="lei" aria-labelledby="lei-title">
+          <p class="where">Site client<span class="when"> Salon de manucure à Tunis</span></p>
+          <h4 id="lei-title">The Lei Studio</h4>
           <p class="summary">Un site vitrine d&#39;une page pour un salon de manucure à Tunis : prestations, tarifs, horaires, plan d&#39;accès et boutons WhatsApp et téléphone en un geste.</p>
-          <ul class="points">
-            <li>Tous les textes et tarifs sont dans un seul fichier de données : les mises à jour ne touchent jamais aux composants.</li>
-            <li>Chaque push sur main construit et déploie le site sur GitHub Pages via GitHub Actions.</li>
-          </ul>
           <ul class="stack" aria-label="Technologies">
             <li>React</li><li>Vite</li><li>CSS</li><li>GitHub Actions</li><li>GitHub Pages</li>
           </ul>
           <p class="links"><a href="https://ahmedhomrani.tn/the-lei-studio/" target="_blank" rel="noopener">Voir le site en ligne<span class="sr"> (s&#39;ouvre dans un nouvel onglet)</span></a></p>
-        </div>
-      </article>
+        </article>
 
-      <article class="world" id="smuppy" style="--c:#2fd3a6" aria-labelledby="smuppy-title">
-        <div class="planet-wrap" aria-hidden="true">
-          <div class="planet planet--gas"><div class="body"></div></div>
-        </div>
-        <div class="world-info">
-          <p class="where">Sport Up</p>
-          <p class="when">Application mobile</p>
-          <h3 id="smuppy-title">Smuppy</h3>
+        <article class="other" id="smuppy" aria-labelledby="smuppy-title">
+          <p class="where">Sport Up<span class="when"> Application mobile</span></p>
+          <h4 id="smuppy-title">Smuppy</h4>
           <p class="summary">Un réseau social du sport : fil d&#39;actualité et stories, courtes vidéos, événements sportifs locaux à rejoindre et une carte qui guide vers les salles de sport proches.</p>
-          <figure class="shot">
-            <img src="/assets/img/smuppy.webp" width="1200" height="848" loading="lazy" decoding="async" alt="Cinq écrans de l&#39;application Smuppy : page d&#39;événement, fil avec stories, écran de démarrage, itinéraire vers une salle de sport et vidéo courte">
-          </figure>
           <ul class="stack" aria-label="Technologies">
             <li>Flutter</li><li>Dart</li><li>Node.js</li>
           </ul>
           <p class="links"><a href="https://www.smuppy.com/" target="_blank" rel="noopener">Voir le site en ligne<span class="sr"> (s&#39;ouvre dans un nouvel onglet)</span></a></p>
-        </div>
-      </article>
+        </article>
 
-      <article class="world world--flip" id="reservi" style="--c:#a8774f" aria-labelledby="reservi-title">
-        <div class="planet-wrap" aria-hidden="true">
-          <div class="planet planet--crater"><div class="body"></div></div>
-        </div>
-        <div class="world-info">
-          <p class="where">Application web</p>
-          <p class="when">Tunisie</p>
-          <h3 id="reservi-title">Reservi.tn</h3>
+        <article class="other" id="reservi" aria-labelledby="reservi-title">
+          <p class="where">Application web<span class="when"> Tunisie</span></p>
+          <h4 id="reservi-title">Reservi.tn</h4>
           <p class="summary">Une plateforme pour découvrir et réserver des restaurants, cafés et bars en Tunisie.</p>
-          <figure class="shot">
-            <img src="/assets/img/reservi.webp" width="1200" height="538" loading="lazy" decoding="async" alt="Page d&#39;accueil de Reservi.tn : découvrir des restaurants, cafés et bars en Tunisie">
-          </figure>
           <ul class="stack" aria-label="Technologies">
             <li>Angular</li><li>Spring Boot</li><li>Java</li>
           </ul>
           <p class="links"><a href="https://www.reservi.tn" target="_blank" rel="noopener">Voir le site en ligne<span class="sr"> (s&#39;ouvre dans un nouvel onglet)</span></a></p>
-        </div>
-      </article>
+        </article>
 
-      <article class="world" id="hr" style="--c:#9a86ff" aria-labelledby="hr-title">
-        <div class="planet-wrap" aria-hidden="true">
-          <div class="planet planet--storm"><div class="body"></div></div>
-        </div>
-        <div class="world-info">
-          <p class="where">Digital Power Consulting</p>
-          <p class="when">Févr. à juin 2023, stage</p>
-          <h3 id="hr-title">Gestion RH</h3>
+        <article class="other" id="hr" aria-labelledby="hr-title">
+          <p class="where">Digital Power Consulting<span class="when"> Févr. à juin 2023, stage</span></p>
+          <h4 id="hr-title">Gestion RH</h4>
           <p class="summary">Espace DPC, un portail RH qui relie les employés, les candidats et l&#39;entreprise.</p>
-          <ul class="points">
-            <li>Authentification sécurisée et contrôle d&#39;accès par rôles.</li>
-            <li>Composants Angular réutilisables pour des écrans cohérents.</li>
-          </ul>
-          <figure class="shot">
-            <img src="/assets/img/hr-management.webp" width="1200" height="603" loading="lazy" decoding="async" alt="Page d&#39;accueil d&#39;Espace DPC, le portail RH de Digital Power Consulting">
-          </figure>
           <ul class="stack" aria-label="Technologies">
             <li>Angular</li><li>Spring Boot</li><li>Spring Security</li><li>Java</li><li>MySQL</li>
           </ul>
-        </div>
-      </article>
+        </article>
 
-      <article class="world world--flip" id="resaposte" style="--c:#f4c430" aria-labelledby="resaposte-title">
-        <div class="planet-wrap" aria-hidden="true">
-          <div class="planet planet--sand"><div class="body"></div></div>
-        </div>
-        <div class="world-info">
-          <p class="where">La Poste Tunisienne</p>
-          <p class="when">Juin à août 2022, stage</p>
-          <h3 id="resaposte-title">ResaPoste</h3>
+        <article class="other" id="resaposte" aria-labelledby="resaposte-title">
+          <p class="where">La Poste Tunisienne<span class="when"> Juin à août 2022, stage</span></p>
+          <h4 id="resaposte-title">ResaPoste</h4>
           <p class="summary">La prise de rendez-vous pour les clients VIP de La Poste Tunisienne : un créneau réservé plutôt qu&#39;une file d&#39;attente.</p>
-          <ul class="points">
-            <li>Modules de planification et de calendrier, authentification et endpoints d&#39;API protégés.</li>
-          </ul>
-          <figure class="shot">
-            <img src="/assets/img/resaposte.webp" width="1200" height="572" loading="lazy" decoding="async" alt="Page d&#39;accueil de ResaPoste, sous la marque myPoste, pour les clients de La Poste Tunisienne">
-          </figure>
           <ul class="stack" aria-label="Technologies">
             <li>Angular</li><li>Spring Boot</li><li>Java</li><li>MySQL</li>
           </ul>
           <p class="links"><a href="https://github.com/ahmedhomrani/ResaPoste" target="_blank" rel="noopener">Voir le code sur GitHub<span class="sr"> (s&#39;ouvre dans un nouvel onglet)</span></a></p>
-        </div>
-      </article>
+        </article>
 
+      </div>
     </section>
 
     <section class="experience" id="experience" aria-labelledby="exp-title">
@@ -667,11 +608,8 @@
     </section>
 
     <section class="about" id="about" aria-labelledby="about-title">
-      <figure class="portrait">
-        <img src="/assets/img/ahmed-homrani.webp" width="534" height="467" loading="lazy" decoding="async" alt="Portrait d&#39;Ahmed Homrani">
-      </figure>
+      <h2 id="about-title">À propos</h2>
       <div class="about-copy">
-        <h2 id="about-title">À propos</h2>
         <p>Je suis développeur Java et ingénieur logiciel, basé à Tunis, avec trois ans d&#39;expérience professionnelle en Java et Angular. Je tiens à la Clean Architecture et aux parties discrètes du logiciel : la règle de validation qui bloque une facture erronée, le contrôle d&#39;accès qui empêche un tenant de voir les données d&#39;un autre, la requête SQL qui fait charger un rapport en quelques secondes.</p>
         <p>J&#39;ai terminé un mastère en développement logiciel en parallèle de mon poste, et j&#39;utilise des outils de développement assisté par IA au quotidien. Un trait de caractère : je ne peux pas dormir avec un bug dans mon projet.</p>
         <dl class="facts">
@@ -718,7 +656,7 @@
           <div class="hp" aria-hidden="true"><label>Leave empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
 
           <div class="form-foot">
-            <button class="btn btn-sun" type="submit" data-label="Envoyer le message" data-sending="Envoi…">Envoyer le message</button>
+            <button class="btn btn-primary" type="submit" data-label="Envoyer le message" data-sending="Envoi…">Envoyer le message</button>
             <p class="form-note">Vos coordonnées servent uniquement à vous répondre.</p>
           </div>
           <p class="form-status" id="form-status" role="status" aria-live="polite" tabindex="-1"
@@ -746,7 +684,7 @@
   </main>
 
   <footer class="foot">
-    <p>&copy; <span id="year">2026</span> Ahmed Homrani. Conçu à la main en HTML, CSS et un peu de JavaScript.</p>
+    <p>&copy; <span id="year">2026</span> Ahmed Homrani. Basé à Tunis, Tunisie.</p>
     <a href="#top">Retour en haut</a>
   </footer>
 

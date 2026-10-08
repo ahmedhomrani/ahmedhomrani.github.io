@@ -10,8 +10,9 @@
   <link rel="canonical" href="{{ site }}{{ t.path }}">
 {% for l in langs %}  <link rel="alternate" hreflang="{{ l.hreflang }}" href="{{ site }}{{ l.path }}">
 {% endfor %}  <link rel="alternate" hreflang="x-default" href="{{ site }}/">
-  <meta name="theme-color" content="#0c1124">
-  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#f5f6f8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b1019" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
 
   <meta property="og:type" content="profile">
   <meta property="og:site_name" content="Ahmed Homrani">
@@ -43,7 +44,6 @@
   <link rel="me" href="https://github.com/ahmedhomrani">
   <link rel="me" href="https://www.linkedin.com/in/ahmed-homrani">
 
-  <link rel="preload" href="/assets/fonts/bricolage-grotesque-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/hanken-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
   <script>document.documentElement.classList.add('js')</script>
   <link rel="stylesheet" href="/assets/css/main.css?v={{ version }}">
@@ -55,11 +55,11 @@
 </head>
 <body>
   <a class="skip" href="#main">{{ t.ui.skip }}</a>
-  <canvas id="stars" aria-hidden="true"></canvas>
+  <canvas id="field" aria-hidden="true"></canvas>
 
   <header class="nav" id="top">
     <a class="brand" href="{{ t.path }}#top" aria-label="{{ t.ui.home_label }}">
-      <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><circle cx="16" cy="16" r="9" fill="var(--sun)"/><ellipse cx="16" cy="16" rx="15" ry="5" fill="none" stroke="var(--starlight)" stroke-width="1.4" transform="rotate(-20 16 16)"/></svg>
+      <span class="brand-mark" aria-hidden="true">AH</span>
       <span>Ahmed Homrani</span>
     </a>
 
@@ -99,51 +99,61 @@
         <h1 id="hero-title">Ahmed Homrani</h1>
         <p class="lede">{{ t.hero.lede }}</p>
         <div class="cta">
-          <a class="btn btn-sun" href="#work">{{ t.hero.cta_work }}</a>
-          <a class="btn btn-ghost" href="/assets/cv/ahmed-homrani-cv-{{ t.lang }}.pdf" download>{{ t.hero.cta_cv }}</a>
+          <a class="btn btn-primary" href="#work">{{ t.hero.cta_work }}</a>
+          <a class="btn btn-secondary" href="/assets/cv/ahmed-homrani-cv-{{ t.lang }}.pdf" download>{{ t.hero.cta_cv }}</a>
         </div>
         <dl class="hero-facts">
 {% for f in t.hero.facts %}          <div><dt>{{ f.dt }}</dt><dd>{{ f.dd }}</dd></div>
 {% endfor %}        </dl>
       </div>
-
-      <div class="system" role="navigation" aria-label="{{ t.ui.system_label }}">
-        <div class="sun" aria-hidden="true"></div>
-        <div class="orbits">
-{% for p in projects %}          <div class="orbit" style="--r:{{ p.r }}px;--t:{{ p.t }}s;--d:{{ p.d }}s;--a:{{ p.a }}deg"><a class="moon" href="#{{ p.id }}" style="--c:{{ p.color }}"><span>{{ t.projects["items"][p.id].title }}</span></a></div>
-{% endfor %}        </div>
-        <p class="system-hint">{{ t.ui.system_hint }}</p>
-      </div>
+      <figure class="hero-portrait">
+        <img src="/assets/img/ahmed-homrani.webp" width="534" height="467" fetchpriority="high" decoding="async" alt="{{ t.about.portrait_alt }}">
+      </figure>
     </section>
 
-    <section class="journey" id="work" aria-labelledby="work-title">
+    <section class="work" id="work" aria-labelledby="work-title">
       <header class="section-head">
         <h2 id="work-title">{{ t.projects.head }}</h2>
         <p>{{ t.projects.intro }}</p>
       </header>
-{% for p in projects %}{% set it = t.projects["items"][p.id] %}
-      <article class="world{% if loop.index is even %} world--flip{% endif %}" id="{{ p.id }}" style="--c:{{ p.color }}" aria-labelledby="{{ p.id }}-title">
-        <div class="planet-wrap" aria-hidden="true">
-          <div class="planet planet--{{ p.surface }}">{% if p.ring %}<div class="ring ring--back"></div>{% endif %}<div class="body"></div>{% if p.ring %}<div class="ring ring--front"></div>{% endif %}</div>
-        </div>
-        <div class="world-info">
-          <p class="where">{{ it.where }}</p>
-          <p class="when">{{ it.when }}</p>
-          <h3 id="{{ p.id }}-title">{{ it.title }}</h3>
+
+      <h3 class="group-head">{{ t.ui.featured_head }}</h3>
+      <div class="cases">
+{% for p in projects if p.featured %}{% set it = t.projects["items"][p.id] %}
+        <article class="case" id="{{ p.id }}" aria-labelledby="{{ p.id }}-title">
+          <div class="case-meta">
+            <p class="where">{{ it.where }}</p>
+            <p class="when">{{ it.when }}</p>
+{% if p.links %}            <p class="links">{% for k in p.links %}<a href="{{ k.href }}" target="_blank" rel="noopener">{{ t.ui[k.label] }}<span class="sr"> {{ t.ui.new_tab }}</span></a>{% endfor %}</p>
+{% endif %}          </div>
+          <div class="case-body">
+            <h4 id="{{ p.id }}-title">{{ it.title }}</h4>
+            <p class="summary">{{ it.summary }}</p>
+{% if it.points %}            <ul class="points">
+{% for pt in it.points %}              <li>{{ pt }}</li>
+{% endfor %}            </ul>
+{% endif %}            <ul class="stack" aria-label="{{ t.ui.stack }}">
+              {% for s in p.stack %}<li>{{ s }}</li>{% endfor %}
+            </ul>
+          </div>
+        </article>
+{% endfor %}
+      </div>
+
+      <h3 class="group-head">{{ t.ui.other_head }}</h3>
+      <div class="others">
+{% for p in projects if not p.featured %}{% set it = t.projects["items"][p.id] %}
+        <article class="other" id="{{ p.id }}" aria-labelledby="{{ p.id }}-title">
+          <p class="where">{{ it.where }}<span class="when"> {{ it.when }}</span></p>
+          <h4 id="{{ p.id }}-title">{{ it.title }}</h4>
           <p class="summary">{{ it.summary }}</p>
-{% if it.points %}          <ul class="points">
-{% for pt in it.points %}            <li>{{ pt }}</li>
-{% endfor %}          </ul>
-{% endif %}{% if p.img %}          <figure class="shot">
-            <img src="/assets/img/{{ p.img.src }}" width="{{ p.img.w }}" height="{{ p.img.h }}" loading="lazy" decoding="async" alt="{{ it.alt }}">
-          </figure>
-{% endif %}          <ul class="stack" aria-label="{{ t.ui.stack }}">
+          <ul class="stack" aria-label="{{ t.ui.stack }}">
             {% for s in p.stack %}<li>{{ s }}</li>{% endfor %}
           </ul>
 {% if p.links %}          <p class="links">{% for k in p.links %}<a href="{{ k.href }}" target="_blank" rel="noopener">{{ t.ui[k.label] }}<span class="sr"> {{ t.ui.new_tab }}</span></a>{% endfor %}</p>
-{% endif %}        </div>
-      </article>
+{% endif %}        </article>
 {% endfor %}
+      </div>
     </section>
 
     <section class="experience" id="experience" aria-labelledby="exp-title">
@@ -178,11 +188,8 @@
     </section>
 
     <section class="about" id="about" aria-labelledby="about-title">
-      <figure class="portrait">
-        <img src="/assets/img/ahmed-homrani.webp" width="534" height="467" loading="lazy" decoding="async" alt="{{ t.about.portrait_alt }}">
-      </figure>
+      <h2 id="about-title">{{ t.about.head }}</h2>
       <div class="about-copy">
-        <h2 id="about-title">{{ t.about.head }}</h2>
 {% for para in t.about.p %}        <p>{{ para }}</p>
 {% endfor %}        <dl class="facts">
 {% for f in t.about.facts %}          <div><dt>{{ f.dt }}</dt><dd>{{ f.dd }}{% if f.get('link') %}<a href="{{ f.link.href }}" target="_blank" rel="noopener">{{ f.link.text }}</a>{{ f.link.after }}{% endif %}</dd></div>
@@ -226,7 +233,7 @@
           <div class="hp" aria-hidden="true"><label>Leave empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
 
           <div class="form-foot">
-            <button class="btn btn-sun" type="submit" data-label="{{ t.contact.f_send }}" data-sending="{{ t.contact.f_sending }}">{{ t.contact.f_send }}</button>
+            <button class="btn btn-primary" type="submit" data-label="{{ t.contact.f_send }}" data-sending="{{ t.contact.f_sending }}">{{ t.contact.f_send }}</button>
             <p class="form-note">{{ t.contact.f_privacy }}</p>
           </div>
           <p class="form-status" id="form-status" role="status" aria-live="polite" tabindex="-1"

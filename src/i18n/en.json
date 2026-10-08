@@ -11,7 +11,7 @@
     "description": "Ahmed Homrani, Java developer and software engineer in Tunis, Tunisia. Spring Boot and Angular: document automation, ERP, PEPPOL e-invoicing, Flutter apps.",
     "og_title": "Ahmed Homrani | Java Developer & Software Engineer, Tunisia",
     "og_description": "Full stack Java developer at Audaxis in Tunis. Spring Boot, Angular, document automation, ERP, secure multi-tenant platforms and mobile apps.",
-    "og_alt": "Ahmed Homrani, full stack Java developer, with planets representing his projects"
+    "og_alt": "Ahmed Homrani, Java developer and software engineer in Tunisia"
   },
   "schema": {
     "job_title": "Full Stack Java Developer",
@@ -31,18 +31,18 @@
     "lang_label": "Language",
     "cv": "CV",
     "cv_pdf": "CV (PDF)",
-    "system_label": "Projects shown as planets",
-    "system_hint": "Each planet is a project. Pick one, or scroll to travel.",
     "stack": "Tech stack",
     "visit_site": "Visit the live site",
     "view_code": "View the code on GitHub",
     "new_tab": "(opens in a new tab)",
-    "footer": "Hand-built with HTML, CSS and a little JavaScript.",
+    "footer": "Based in Tunis, Tunisia.",
     "back_top": "Back to the top",
     "dismiss": "Dismiss",
     "suggest": "This site is also available in English.",
     "suggest_go": "Read in English",
-    "visit_product": "Visit the product website"
+    "visit_product": "Visit the product website",
+    "other_head": "Other projects",
+    "featured_head": "Case studies"
   },
   "hero": {
     "kicker": "Java developer and software engineer in Tunisia",
@@ -235,7 +235,7 @@
   },
   "about": {
     "head": "About me",
-    "portrait_alt": "Portrait of Ahmed Homrani",
+    "portrait_alt": "Ahmed Homrani, Java developer",
     "p": [
       "I'm a Java developer and software engineer based in Tunis, Tunisia, with three years of professional Java and Angular work. I care about clean architecture and the unglamorous parts of software: the validation rule that stops a bad invoice, the access check that keeps one tenant out of another's data, the SQL query that makes a report load in seconds.",
       "I finished a master's in software development alongside my job, and I use AI coding tools every day. One thing about me: I can't sleep with a bug left in my project."

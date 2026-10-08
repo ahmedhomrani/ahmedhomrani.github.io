@@ -29,15 +29,15 @@ ORBITS = [(70, 13, -3, 40), (102, 18, -11, 160), (134, 24, -6, 280), (166, 31, -
           (198, 39, -30, 220), (230, 48, -9, 340), (262, 58, -47, 10), (294, 70, -15, 130)]
 
 PROJECTS = [
-    {"id": "smartdigidocs", "color": "#7fb2ff", "surface": "ice", "ring": True,
+    {"id": "smartdigidocs", "featured": True, "color": "#7fb2ff", "surface": "ice", "ring": True,
      "stack": ["Java", "OSGi", "Eclipse EMF", "Angular", "OAuth2", "SAML", "JWT", "LDAP", "Jenkins", "Azure DevOps", "Docker", "Maven"],
      "links": [{"href": "https://www.smartdigidocs.com/", "label": "visit_product"}],
      "schema": "SoftwareApplication", "url": "https://www.smartdigidocs.com/"},
-    {"id": "erp", "color": "#e0683f", "surface": "rock", "ring": False,
+    {"id": "erp", "featured": True, "color": "#e0683f", "surface": "rock", "ring": False,
      "stack": ["Java", "JEE", "Spring Boot", "Angular", "TypeScript", "PostgreSQL", "Oracle", "Docker", "Kubernetes", "GitLab CI/CD"],
      "links": [{"href": "https://www.apiz-erp.com/", "label": "visit_product"}],
      "schema": "SoftwareApplication", "url": "https://www.apiz-erp.com/"},
-    {"id": "health", "color": "#f28cb1", "surface": "gas", "ring": False,
+    {"id": "health", "featured": True, "color": "#f28cb1", "surface": "gas", "ring": False,
      "stack": ["Java", "Spring Boot", "Spring Security", "Spring Data JPA", "Angular", "Flutter", "Dart", "PostgreSQL", "Kafka"],
      "links": [{"href": "https://tabibi.tn/", "label": "visit_site"}],
      "schema": "WebApplication", "url": "https://tabibi.tn/"},
@@ -69,6 +69,7 @@ for p, (r, t, d, a) in zip(PROJECTS, ORBITS):
     p.update(r=r, t=t, d=d, a=a)
     p.setdefault("img", None)
     p.setdefault("links", [])
+    p.setdefault("featured", False)
 
 
 def load_langs():
@@ -145,7 +146,7 @@ def sitemap(langs):
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
              '        xmlns:xhtml="http://www.w3.org/1999/xhtml"',
              '        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">']
-    imgs = ["ahmed-homrani.webp"] + [p["img"]["src"] for p in PROJECTS if p["img"]]
+    imgs = ["ahmed-homrani.webp"]
     for t in langs:
         lines.append("  <url>")
         lines.append(f"    <loc>{SITE}{t['path']}</loc>")

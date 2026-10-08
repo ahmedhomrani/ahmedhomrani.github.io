@@ -1,5 +1,5 @@
-/* Ahmed Homrani portfolio: starfield that warps with scroll speed,
-   and planets that drift into place as you travel past them.
+/* Ahmed Homrani portfolio: menu, contact form, language hint,
+   and a dot-grid background that reacts to the pointer.
    Everything is progressive enhancement: the page is complete without JS. */
 (() => {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -119,103 +119,115 @@
     }
   }
 
-  /* ---------- Starfield ---------- */
-  const canvas = document.getElementById('stars');
+  /* ---------- Background: a dot grid that leans toward the pointer ---------- */
+  const canvas = document.getElementById('field');
   const ctx = canvas && canvas.getContext('2d');
-  let stars = [];
-  let w = 0, h = 0, dpr = 1;
-  let lastY = window.scrollY, velocity = 0;
+  if (ctx) {
+    const GAP = 26;          // grid spacing, px
+    const RADIUS = 170;      // pointer influence radius, px
+    const PUSH = 9;          // max displacement, px
+    let w = 0, h = 0, dpr = 1, cols = 0, rows = 0;
+    let base = '#c3c9d4', hot = '#2747d0';
+    const target = { x: -1e4, y: -1e4 };
+    const pos = { x: -1e4, y: -1e4 };
+    let energy = 0;          // 0 = pointer away, 1 = pointer active
+    let energyTarget = 0;
+    let running = false;
 
-  const palette = ['#eceaf6', '#eceaf6', '#eceaf6', '#ffd9a0', '#b9c8ff'];
+    const readColors = () => {
+      const cs = getComputedStyle(document.documentElement);
+      base = cs.getPropertyValue('--dot').trim() || base;
+      hot = cs.getPropertyValue('--dot-hot').trim() || hot;
+    };
+    const hex = (c) => {
+      const m = c.replace('#', '');
+      const n = parseInt(m.length === 3 ? m.split('').map((x) => x + x).join('') : m, 16);
+      return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+    };
 
-  function resize() {
-    if (!ctx) return;
-    dpr = Math.min(window.devicePixelRatio || 1, 2);
-    w = window.innerWidth; h = window.innerHeight;
-    canvas.width = w * dpr; canvas.height = h * dpr;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const count = Math.min(420, Math.round((w * h) / 3800));
-    stars = Array.from({ length: count }, () => ({
-      x: Math.random() * w,
-      y: Math.random() * h * 3,          // spread over a tall band so parallax wraps smoothly
-      z: 0.15 + Math.random() * 0.85,    // depth: 1 is closest
-      r: Math.random() < 0.08 ? 1.6 : 0.6 + Math.random() * 0.8,
-      c: palette[(Math.random() * palette.length) | 0],
-      tw: Math.random() * Math.PI * 2
-    }));
-    if (reduce.matches) draw(0);
-  }
+    function resize() {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      w = window.innerWidth; h = window.innerHeight;
+      canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      cols = Math.ceil(w / GAP) + 1; rows = Math.ceil(h / GAP) + 1;
+      draw();
+    }
 
-  function draw(time) {
-    ctx.clearRect(0, 0, w, h);
-    const sy = window.scrollY;
-    const band = h * 3;
-    for (const s of stars) {
-      // parallax: closer stars move more
-      let y = (s.y - sy * s.z * 0.35) % band;
-      if (y < 0) y += band;
-      if (y > h + 40) continue;
-      const twinkle = reduce.matches ? 1 : 0.65 + 0.35 * Math.sin(time * 0.0015 + s.tw);
-      ctx.globalAlpha = (0.3 + s.z * 0.6) * twinkle;
-      ctx.strokeStyle = ctx.fillStyle = s.c;
-      const streak = Math.min(Math.abs(velocity) * s.z * 1.4, 60);
-      if (streak > 1.5) {
-        // warp streaks trail behind the direction of travel
-        ctx.globalAlpha *= 0.7;
-        ctx.lineWidth = s.r;
-        ctx.beginPath();
-        ctx.moveTo(s.x, y);
-        ctx.lineTo(s.x, y + Math.sign(velocity) * streak);
-        ctx.stroke();
-      } else {
-        ctx.beginPath();
-        ctx.arc(s.x, y, s.r, 0, Math.PI * 2);
-        ctx.fill();
+    function draw() {
+      ctx.clearRect(0, 0, w, h);
+      const b = hex(base), k = hex(hot);
+      const ox = (w - (cols - 1) * GAP) / 2, oy = (h - (rows - 1) * GAP) / 2;
+      const r2 = RADIUS * RADIUS;
+      // calm grid in one pass
+      ctx.fillStyle = base;
+      ctx.beginPath();
+      for (let j = 0; j < rows; j++) {
+        for (let i = 0; i < cols; i++) {
+          const x = ox + i * GAP, y = oy + j * GAP;
+          const dx = x - pos.x, dy = y - pos.y;
+          if (energy > 0.01 && dx * dx + dy * dy < r2) continue;
+          ctx.moveTo(x + 1.1, y); ctx.arc(x, y, 1.1, 0, Math.PI * 2);
+        }
+      }
+      ctx.fill();
+      if (energy <= 0.01) return;
+      // soft halo under the pointer
+      const g = ctx.createRadialGradient(pos.x, pos.y, 0, pos.x, pos.y, RADIUS);
+      g.addColorStop(0, `rgba(${k[0]},${k[1]},${k[2]},${0.07 * energy})`);
+      g.addColorStop(1, `rgba(${k[0]},${k[1]},${k[2]},0)`);
+      ctx.fillStyle = g;
+      ctx.fillRect(pos.x - RADIUS, pos.y - RADIUS, RADIUS * 2, RADIUS * 2);
+      // dots inside the radius: grow, tint and move away from the pointer
+      const i0 = Math.max(0, Math.floor((pos.x - RADIUS - ox) / GAP));
+      const i1 = Math.min(cols - 1, Math.ceil((pos.x + RADIUS - ox) / GAP));
+      const j0 = Math.max(0, Math.floor((pos.y - RADIUS - oy) / GAP));
+      const j1 = Math.min(rows - 1, Math.ceil((pos.y + RADIUS - oy) / GAP));
+      for (let j = j0; j <= j1; j++) {
+        for (let i = i0; i <= i1; i++) {
+          const x = ox + i * GAP, y = oy + j * GAP;
+          const dx = x - pos.x, dy = y - pos.y;
+          const d2 = dx * dx + dy * dy;
+          if (d2 >= r2) continue;
+          const d = Math.sqrt(d2) || 1;
+          let t = 1 - d / RADIUS; t = t * t * (3 - 2 * t) * energy; // smoothstep
+          const push = PUSH * t;
+          const px = x + (dx / d) * push, py = y + (dy / d) * push;
+          const c = b.map((v, n) => Math.round(v + (k[n] - v) * t * 0.8));
+          ctx.fillStyle = `rgb(${c[0]},${c[1]},${c[2]})`;
+          ctx.beginPath();
+          ctx.arc(px, py, 1.1 + 1.1 * t, 0, Math.PI * 2);
+          ctx.fill();
+        }
       }
     }
-    ctx.globalAlpha = 1;
-  }
 
-  /* ---------- Planets ---------- */
-  const planets = [...document.querySelectorAll('.planet')];
-
-  function placePlanets() {
-    const vh = window.innerHeight;
-    for (const p of planets) {
-      const r = p.getBoundingClientRect();
-      if (r.bottom < -200 || r.top > vh + 200) continue;
-      const d = Math.max(-1.2, Math.min(1.2, (r.top + r.height / 2 - vh / 2) / vh));
-      const s = 1 - Math.min(Math.abs(d), 1) * 0.32;
-      p.style.setProperty('--s', s.toFixed(3));
-      p.style.setProperty('--ty', (d * 70).toFixed(1) + 'px');
-      p.style.setProperty('--rot', (d * 18).toFixed(1) + 'deg');
+    function frame() {
+      pos.x += (target.x - pos.x) * 0.16;
+      pos.y += (target.y - pos.y) * 0.16;
+      energy += (energyTarget - energy) * 0.08;
+      draw();
+      const settled = Math.abs(target.x - pos.x) < 0.3 && Math.abs(target.y - pos.y) < 0.3 && Math.abs(energyTarget - energy) < 0.005;
+      if (settled) { running = false; return; }
+      requestAnimationFrame(frame);
     }
+    const kick = () => { if (!running && !reduce.matches) { running = true; requestAnimationFrame(frame); } };
+
+    const onMove = (e) => {
+      if (reduce.matches) return;
+      if (pos.x < -1e3) { pos.x = e.clientX; pos.y = e.clientY; }
+      target.x = e.clientX; target.y = e.clientY; energyTarget = 1; kick();
+    };
+    window.addEventListener('pointermove', onMove, { passive: true });
+    window.addEventListener('pointerdown', onMove, { passive: true });
+    document.documentElement.addEventListener('pointerleave', () => { energyTarget = 0; kick(); });
+    window.addEventListener('blur', () => { energyTarget = 0; kick(); });
+    window.addEventListener('pointerup', (e) => { if (e.pointerType === 'touch') { energyTarget = 0; kick(); } }, { passive: true });
+    window.addEventListener('resize', resize, { passive: true });
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', () => { readColors(); draw(); });
+    reduce.addEventListener?.('change', () => { energy = energyTarget = 0; draw(); });
+
+    readColors();
+    resize();
   }
-
-  /* ---------- Loop ---------- */
-  let running = false;
-  function frame(time) {
-    const y = window.scrollY;
-    const dy = y - lastY;
-    lastY = y;
-    velocity += (dy - velocity) * 0.18;     // smooth the scroll speed
-    if (Math.abs(velocity) < 0.05) velocity = 0;
-    if (ctx) draw(time);
-    placePlanets();
-    if (running) requestAnimationFrame(frame);
-  }
-
-  function start() {
-    if (running || reduce.matches || document.hidden) return;
-    running = true;
-    requestAnimationFrame(frame);
-  }
-  function stop() { running = false; }
-
-  window.addEventListener('resize', resize, { passive: true });
-  document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
-  reduce.addEventListener?.('change', () => { if (reduce.matches) { stop(); planets.forEach(p => p.removeAttribute('style')); draw(0); } else start(); });
-
-  resize();
-  if (reduce.matches) { if (ctx) draw(0); } else start();
 })();
