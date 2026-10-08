@@ -22,7 +22,10 @@ CONTACT_EMAIL = "contact.ahmedhomrani@gmail.com"   # where website messages arri
 WHATSAPP = "21699340980"                          # international format, no + or spaces
 PHONE_DISPLAY = "+216 99 340 980"
 LANG_ORDER = ["en", "fr", "es", "pt"]
-TODAY = datetime.date.today().isoformat()
+TZ = datetime.timezone(datetime.timedelta(hours=1))   # Africa/Tunis, no DST
+NOW = datetime.datetime.now(TZ).replace(microsecond=0)
+TODAY = NOW.date().isoformat()
+NOW_ISO = NOW.isoformat()                                 # e.g. 2026-10-08T22:52:00+01:00 (schema.org DateTime)
 
 # Orbit radius (px), period (s), phase delay (s), static angle for reduced motion (deg)
 ORBITS = [(70, 13, -3, 40), (102, 18, -11, 160), (134, 24, -6, 280), (166, 31, -22, 100),
@@ -105,7 +108,7 @@ def jsonld(t):
              "inLanguage": [l for l in ("en", "fr", "es", "pt-BR")], "publisher": {"@id": person}},
             {"@type": "ProfilePage", "@id": f"{page}#profile", "url": page, "name": t["meta"]["title"],
              "description": t["meta"]["description"], "inLanguage": t["html_lang"],
-             "isPartOf": {"@id": f"{SITE}/#website"}, "mainEntity": {"@id": person}, "dateModified": TODAY},
+             "isPartOf": {"@id": f"{SITE}/#website"}, "mainEntity": {"@id": person}, "dateModified": NOW_ISO},
             {"@type": "Person", "@id": person, "name": "Ahmed Homrani", "givenName": "Ahmed", "familyName": "Homrani",
              "url": f"{SITE}/", "image": f"{SITE}/assets/img/ahmed-homrani.webp",
              "email": f"mailto:{CONTACT_EMAIL}", "telephone": PHONE_DISPLAY.replace(" ", ""),
@@ -150,7 +153,7 @@ def sitemap(langs):
     for t in langs:
         lines.append("  <url>")
         lines.append(f"    <loc>{SITE}{t['path']}</loc>")
-        lines.append(f"    <lastmod>{TODAY}</lastmod>")
+        lines.append(f"    <lastmod>{NOW_ISO}</lastmod>")
         for l in langs:
             lines.append(f'    <xhtml:link rel="alternate" hreflang="{l["hreflang"]}" href="{SITE}{l["path"]}"/>')
         lines.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{SITE}/"/>')
